@@ -1194,7 +1194,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9dff66;
+  background: #b6036e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2861,6 +2861,15 @@ body {
 .post-block {
   box-shadow: 0 3px 6px 0 #000, 0 0 6px 0 #000;
   background: #fff;
+}
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  z-index: 9999;
 }
 .moon-menu,
 .moon-menu-text {
