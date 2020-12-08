@@ -27,47 +27,132 @@
   <entry>
     <title>计网复习（1）</title>
     <url>/2020/12/08/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="计网复习（1）"><a href="#计网复习（1）" class="headerlink" title="计网复习（1）"></a>计网复习（1）</h1><hr>
-<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h4 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h4><p>&emsp;&emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
+    <content><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h3><p>&emsp;&emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
 <p>&emsp;&emsp;软件和硬件组成</p>
 <a id="more"></a>
 
-<h4 id="2、互联网基础结构发展的三个阶段"><a href="#2、互联网基础结构发展的三个阶段" class="headerlink" title="2、互联网基础结构发展的三个阶段"></a>2、互联网基础结构发展的三个阶段</h4><p>&emsp;&emsp;第一阶段：从单个网络 ARPANET 向互联网发展的过程。</p>
+<h3 id="2、互联网基础结构发展的三个阶段"><a href="#2、互联网基础结构发展的三个阶段" class="headerlink" title="2、互联网基础结构发展的三个阶段"></a>2、互联网基础结构发展的三个阶段</h3><p>&emsp;&emsp;第一阶段：从单个网络 ARPANET 向互联网发展的过程。</p>
 <p>&emsp;&emsp;第二阶段：建成了三级结构的互联网。</p>
 <p>&emsp;&emsp;第三阶段：逐渐形成了多层次 ISP （Internet Service Provider）结构的互联网。</p>
-<h4 id="3、成为互联网正式标准要经过三个阶段"><a href="#3、成为互联网正式标准要经过三个阶段" class="headerlink" title="3、成为互联网正式标准要经过三个阶段"></a>3、成为互联网正式标准要经过三个阶段</h4><p>&emsp;&emsp;互联网草案 (Internet Draft) ——有效期只有六个月。在这个阶段还不是 RFC 文档。</p>
+<h3 id="3、成为互联网正式标准要经过三个阶段"><a href="#3、成为互联网正式标准要经过三个阶段" class="headerlink" title="3、成为互联网正式标准要经过三个阶段"></a>3、成为互联网正式标准要经过三个阶段</h3><p>&emsp;&emsp;互联网草案 (Internet Draft) ——有效期只有六个月。在这个阶段还不是 RFC 文档。</p>
 <p>&emsp;&emsp;建议标准 (Proposed Standard) ——从这个阶段开始就成为 RFC 文档。</p>
 <p>&emsp;&emsp;互联网标准 (Internet Standard) ——达到正式标准后，每个标准就分配到一个编号 STDxxxx。 一个标准可以和多个 RFC 文档关联。</p>
-<h4 id="4、互联网的组成"><a href="#4、互联网的组成" class="headerlink" title="4、互联网的组成"></a>4、互联网的组成</h4><p>&emsp;&emsp;从工作方式上看，可以划分为：</p>
+<h3 id="4、互联网的组成"><a href="#4、互联网的组成" class="headerlink" title="4、互联网的组成"></a>4、互联网的组成</h3><p>&emsp;&emsp;从工作方式上看，可以划分为：</p>
 <p>&emsp;&emsp;&emsp;&emsp;边缘部分：主机</p>
 <p>&emsp;&emsp;&emsp;&emsp;核心部分：网络和连接网络的<font color=red>路由器（分组交换）</font></p>
-<h4 id="5、电路交换、分组交换、报文交换"><a href="#5、电路交换、分组交换、报文交换" class="headerlink" title="5、电路交换、分组交换、报文交换"></a>5、电路交换、分组交换、报文交换</h4><h5 id="emsp-emsp-电路交换"><a href="#emsp-emsp-电路交换" class="headerlink" title="&emsp;&emsp;电路交换"></a>&emsp;&emsp;电路交换</h5><p>&emsp;&emsp;&emsp;&emsp;电路交换必定是<font color=red>面向连接的</font></p>
-<p>&emsp;&emsp;&emsp;&emsp;分为三个阶段：建立连接——通信——释放连接</p>
-<p>&emsp;&emsp;&emsp;&emsp;需要建立电路，所有数据包都沿着这条电路传输</p>
-<p>&emsp;&emsp;&emsp;&emsp;数据包只在发送端做处理，之后沿着电路进行数据传输</p>
-<p>&emsp;&emsp;&emsp;&emsp;<strong>优点：</strong></p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;质量保障，确保数据会被送到接收端，无抖动</p>
-<p>&emsp;&emsp;&emsp;&emsp;<strong>缺点：</strong></p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;资源占用造成浪费</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;一旦电路出现故障，传输中断</p>
-<h5 id="emsp-emsp-分组交换"><a href="#emsp-emsp-分组交换" class="headerlink" title="&emsp;&emsp;分组交换"></a>&emsp;&emsp;分组交换</h5><p>&emsp;&emsp;&emsp;&emsp;分组交换采用<font color=red>存储转发技术</font>（路由器需要将整个数据包（分组）都收完整，然后提取目的地址信息，然后按照目的地址进行转发）</p>
-<p>&emsp;&emsp;&emsp;&emsp;<strong>步骤：</strong>                </p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在发送端，先把较长的报文划分成<font color=red>较短的、固定长度的数据段</font>。</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每一个数据段前面<font color = red>添加上首部</font>构成分组(packet)。</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;分组交换网以<font color=red>“分组”</font>作为数据传输单元。</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color=red>依次</font>把各分组发送到接收端。</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;最后，在<font color=red>接收端把收到的数据恢复</font>成为原来的报文。</p>
-<p>&emsp;&emsp;&emsp;&emsp;每一个分组的首部都含有<font color=red>地址（诸如目的地址和源地址）等控制信息</font>。</p>
-<p>&emsp;&emsp;&emsp;&emsp;每个分组在互联网中<font color=red>独立地选择传输路径</font>。</p>
-<p>&emsp;&emsp;&emsp;&emsp;<font color=red>无需建立电路</font>，有数据包就直接发出去</p>
-<p>&emsp;&emsp;&emsp;&emsp;<strong>优点：</strong></p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;网络稳定（robust）</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;资源利用率高</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;整体交换速率高</p>
-<p>&emsp;&emsp;&emsp;&emsp;<strong>缺点：</strong></p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;无可靠性保障：丢包、延时长、抖动</p>
-<h5 id="emsp-emsp-报文交换"><a href="#emsp-emsp-报文交换" class="headerlink" title="&emsp;&emsp;报文交换"></a>&emsp;&emsp;报文交换</h5><h5 id="emsp-emsp-三种交换的图示"><a href="#emsp-emsp-三种交换的图示" class="headerlink" title="&emsp;&emsp;三种交换的图示"></a>&emsp;&emsp;三种交换的图示</h5><p>​                <img src="C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20201208155225674.png" alt="image-20201208155225674"></p>
-<h3 id="6、"><a href="#6、" class="headerlink" title="6、"></a>6、</h3>]]></content>
+<h3 id="5、电路交换、分组交换、报文交换"><a href="#5、电路交换、分组交换、报文交换" class="headerlink" title="5、电路交换、分组交换、报文交换"></a>5、电路交换、分组交换、报文交换</h3><h4 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h4><p>&emsp;&emsp;电路交换必定是<font color=red>面向连接的</font></p>
+<p>&emsp;&emsp;分为三个阶段：建立连接——通信——释放连接</p>
+<p>&emsp;&emsp;需要建立电路，所有数据包都沿着这条电路传输</p>
+<p>&emsp;&emsp;数据包只在发送端做处理，之后沿着电路进行数据传输</p>
+<p>&emsp;&emsp;<strong>优点：</strong></p>
+<p>&emsp;&emsp;&emsp;&emsp;质量保障，确保数据会被送到接收端，无抖动</p>
+<p>&emsp;&emsp;<strong>缺点：</strong></p>
+<p>&emsp;&emsp;&emsp;&emsp;资源占用造成浪费</p>
+<p>&emsp;&emsp;&emsp;&emsp;一旦电路出现故障，传输中断</p>
+<h4 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h4><p>&emsp;&emsp;分组交换采用<font color=red>存储转发技术</font>（路由器需要将整个数据包（分组）都收完整，然后提取目的地址信息，然后按照目的地址进行转发）</p>
+<p>&emsp;&emsp;<strong>步骤：</strong>                </p>
+<p>&emsp;&emsp;&emsp;&emsp;在发送端，先把较长的报文划分成<font color=red>较短的、固定长度的数据段</font>。</p>
+<p>&emsp;&emsp;&emsp;&emsp;每一个数据段前面<font color = red>添加上首部</font>构成分组(packet)。</p>
+<p>&emsp;&emsp;&emsp;&emsp;分组交换网以<font color=red>“分组”</font>作为数据传输单元。</p>
+<p>&emsp;&emsp;&emsp;&emsp;<font color=red>依次</font>把各分组发送到接收端。</p>
+<p>&emsp;&emsp;&emsp;&emsp;最后，在<font color=red>接收端把收到的数据恢复</font>成为原来的报文。</p>
+<p>&emsp;&emsp;每一个分组的首部都含有<font color=red>地址（诸如目的地址和源地址）等控制信息</font>。</p>
+<p>&emsp;&emsp;每个分组在互联网中<font color=red>独立地选择传输路径</font>。</p>
+<p>&emsp;&emsp;<font color=red>无需建立电路</font>，有数据包就直接发出去</p>
+<p>&emsp;&emsp;<strong>优点：</strong></p>
+<p>&emsp;&emsp;&emsp;&emsp;网络稳定（robust）</p>
+<p>&emsp;&emsp;&emsp;&emsp;资源利用率高</p>
+<p>&emsp;&emsp;&emsp;&emsp;整体交换速率高</p>
+<p>&emsp;&emsp;<strong>缺点：</strong></p>
+<p>&emsp;&emsp;&emsp;&emsp;无可靠性保障：丢包、延时长、抖动</p>
+<h4 id="报文交换"><a href="#报文交换" class="headerlink" title="报文交换"></a>报文交换</h4><h4 id="三种交换的图示"><a href="#三种交换的图示" class="headerlink" title="三种交换的图示"></a>三种交换的图示</h4><p>&emsp;&emsp;<img src="https://i.loli.net/2020/12/08/UIDsyzRlfY3BOmE.png" alt="1-1.png"></p>
+<h3 id="6、计算机网络的类别"><a href="#6、计算机网络的类别" class="headerlink" title="6、计算机网络的类别"></a>6、计算机网络的类别</h3><p>&emsp;&emsp;根据大小可以分为</p>
+<p>&emsp;&emsp;&emsp;&emsp;个域网（PAN）</p>
+<p>&emsp;&emsp;&emsp;&emsp;局域网（LAN）</p>
+<p>&emsp;&emsp;&emsp;&emsp;城域网（MAN）</p>
+<p>&emsp;&emsp;&emsp;&emsp;广域网（WAN）</p>
+<h3 id="7、计算机网络的性能"><a href="#7、计算机网络的性能" class="headerlink" title="7、计算机网络的性能"></a>7、计算机网络的性能</h3><h4 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h4><h6 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h6><p>&emsp;&emsp;单位：bit/s、kbit/s、Mbit/s、Gbit/s</p>
+<p>&emsp;&emsp;速率往往是指额定速率或标称速率，非实际运行速率</p>
+<h6 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h6><p>&emsp;&emsp;本来是指信号具有的频带宽度 单位赫（或千赫、兆赫、吉赫）（频域）</p>
+<p>&emsp;&emsp;在计算机网络中，带宽用来<font color=red>表示网络中某通道传送数据的能力</font>。表示在单位时间内网络中的某信道所能通过的“最高数据率”。单位就是数据率的单位bit/s，是“比特每秒”。</p>
+<h6 id="吞吐率"><a href="#吞吐率" class="headerlink" title="吞吐率"></a>吞吐率</h6><p>&emsp;&emsp;在单位时间内通过某个网络（或信道、接口）的数据量</p>
+<p>&emsp;&emsp;<font color=blue>吞吐量受网络的带宽或网络的额定速率的限制</font></p>
+<h6 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h6><p>&emsp;&emsp;指数据从网络（或链路）的一端传送到另一端所需的时间</p>
+<p>&emsp;&emsp;网络中的时延由以下几个不同的部分组成：</p>
+<p>&emsp;&emsp;&emsp;&emsp;(1) 发送时延</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;从发送数据帧的第一个比特算起，到该帧的最后一个比特发送完毕所需的时间。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;发送时延 = 数据帧长度（bit）/ 发送速率（bit/s）</p>
+<p>&emsp;&emsp;&emsp;&emsp;(2) 传播时延</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;电磁波在信道中需要传播一定的距离而花费的时间</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;传播时延 = 信道长度（m）/ 信号在信道上的传播速率（m/s）</p>
+<p>&emsp;&emsp;&emsp;&emsp;(3) 处理时延</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;主机或路由器在收到分组时，为处理分组（例如分析首部、提取数据、差错检验或查找路由）所花的时间。</p>
+<p>&emsp;&emsp;&emsp;&emsp;(4) 排队时延</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;分组在路由器输入输出队列中排队等待处理所经历的时延</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<font color=blue>排队时延的长短往往取决于网络中当时的通信量。</font></p>
+<h6 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h6><p>&emsp;&emsp;链路的时延带宽积又称为以比特为单位的链路长度</p>
+<p>&emsp;&emsp;时延带宽积 =  传播时延 × 带宽</p>
+<h6 id="往返时间RTT"><a href="#往返时间RTT" class="headerlink" title="往返时间RTT"></a>往返时间RTT</h6><p>&emsp;&emsp;往返时间表示<font color=red>从发送方发送数据开始，到发送方收到来自接收方的确认</font>，总共经历的时间。</p>
+<p>&emsp;&emsp;在互联网中，往返时间还包括各中间结点的<font color=red>处理时延</font>、<font color=red>排队时延</font>以及<font color=red>转发数据</font>时的发送时延。</p>
+<h6 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h6><p>&emsp;&emsp;分为<font color=red>信道利用率</font>和<font color=red>网络利用率</font>。</p>
+<p>&emsp;&emsp;<font color=red>信道利用率</font>指出某信道有百分之几的时间是被利用的（有数据通过）。完全空闲的信道的利用率是零。</p>
+<p>&emsp;&emsp;<font color=red>网络利用率</font>则是全网络的<font color=red>信道利用率的加权平均值</font>。</p>
+<p>&emsp;&emsp;信道利用率并非越高越好。<font color=blue>当某信道的利用率增大时，该信道引起的时延也就迅速增加</font>。</p>
+<p>&emsp;&emsp;D = D0 / （1 - U），其中，D表示当前时延，D0表示空闲时的时延，U是网络利用率，在0到1之间。</p>
+<h5 id="非性能指标"><a href="#非性能指标" class="headerlink" title="非性能指标"></a>非性能指标</h5><p>&emsp;&emsp;费用</p>
+<p>&emsp;&emsp;质量</p>
+<p>&emsp;&emsp;标准化</p>
+<p>&emsp;&emsp;可靠性</p>
+<p>&emsp;&emsp;可扩展性和可升级性</p>
+<p>&emsp;&emsp;易于管理和维护</p>
+<h3 id="8、网络协议的三个组成要素"><a href="#8、网络协议的三个组成要素" class="headerlink" title="8、网络协议的三个组成要素"></a>8、网络协议的三个组成要素</h3><p>&emsp;&emsp;语法</p>
+<p>&emsp;&emsp;语义</p>
+<p>&emsp;&emsp;同步</p>
+<h3 id="9、协议体系结构"><a href="#9、协议体系结构" class="headerlink" title="9、协议体系结构"></a>9、协议体系结构</h3><table>
+<thead>
+<tr>
+<th align="center">OSI体系结构</th>
+<th align="center">TCP/IP体系结构</th>
+<th align="center">五层协议体系结构</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">应用层</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">表示层</td>
+<td align="center">应用层</td>
+<td align="center">应用层</td>
+</tr>
+<tr>
+<td align="center">会话层</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">运输层</td>
+<td align="center">运输层（TCP或UDP）</td>
+<td align="center">运输层</td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td align="center">网际层IP</td>
+<td align="center">网络层</td>
+</tr>
+<tr>
+<td align="center">数据链路层</td>
+<td align="center">网络接口层</td>
+<td align="center">数据链路层</td>
+</tr>
+<tr>
+<td align="center">物理层</td>
+<td align="center"></td>
+<td align="center">物理层</td>
+</tr>
+</tbody></table>
+]]></content>
       <categories>
         <category>大学</category>
         <category>大三</category>
