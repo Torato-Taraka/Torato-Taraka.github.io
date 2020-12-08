@@ -24,4 +24,56 @@
         <tag>try</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计网复习（1）</title>
+    <url>/2020/12/08/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="计网复习（1）"><a href="#计网复习（1）" class="headerlink" title="计网复习（1）"></a>计网复习（1）</h1><hr>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h4 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h4><p>​        利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
+<p>​        软件和硬件组成</p>
+<a id="more"></a>
+
+<h4 id="2、互联网基础结构发展的三个阶段"><a href="#2、互联网基础结构发展的三个阶段" class="headerlink" title="2、互联网基础结构发展的三个阶段"></a>2、互联网基础结构发展的三个阶段</h4><p>​        第一阶段：从单个网络 ARPANET 向互联网发展的过程。</p>
+<p>​        第二阶段：建成了三级结构的互联网。</p>
+<p>​        第三阶段：逐渐形成了多层次 ISP （Internet Service Provider）结构的互联网。</p>
+<h4 id="3、成为互联网正式标准要经过三个阶段"><a href="#3、成为互联网正式标准要经过三个阶段" class="headerlink" title="3、成为互联网正式标准要经过三个阶段"></a>3、成为互联网正式标准要经过三个阶段</h4><p>​        互联网草案 (Internet Draft) ——有效期只有六个月。在这个阶段还不是 RFC 文档。</p>
+<p>​        建议标准 (Proposed Standard) ——从这个阶段开始就成为 RFC 文档。</p>
+<p>​        互联网标准 (Internet Standard) ——达到正式标准后，每个标准就分配到一个编号 STDxxxx。 一个标准可以和多个 RFC 文档关联。</p>
+<h4 id="4、互联网的组成"><a href="#4、互联网的组成" class="headerlink" title="4、互联网的组成"></a>4、互联网的组成</h4><p>​        从工作方式上看，可以划分为：</p>
+<p>​                边缘部分：主机</p>
+<p>​                核心部分：网络和连接网络的<font color=red>路由器（分组交换）</font></p>
+<h4 id="5、电路交换、分组交换、报文交换"><a href="#5、电路交换、分组交换、报文交换" class="headerlink" title="5、电路交换、分组交换、报文交换"></a>5、电路交换、分组交换、报文交换</h4><h5 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h5><p>​                电路交换必定是<font color=red>面向连接的</font></p>
+<p>​                分为三个阶段：建立连接——通信——释放连接</p>
+<p>​                需要建立电路，所有数据包都沿着这条电路传输</p>
+<p>​                数据包只在发送端做处理，之后沿着电路进行数据传输</p>
+<p>​                <strong>优点：</strong></p>
+<p>​                        质量保障，确保数据会被送到接收端，无抖动</p>
+<p>​                <strong>缺点：</strong></p>
+<p>​                        资源占用造成浪费</p>
+<p>​                        一旦电路出现故障，传输中断</p>
+<h5 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h5><p>​                分组交换采用<font color=red>存储转发技术</font>（路由器需要将整个数据包（分组）都收完整，然后提取目的地址信息，然后按照目的地址进行转发）</p>
+<p>​                <strong>步骤：</strong>                </p>
+<p>​                        在发送端，先把较长的报文划分成<font color=red>较短的、固定长度的数据段</font>。</p>
+<p>​                        每一个数据段前面<font color = red>添加上首部</font>构成分组(packet)。</p>
+<p>​                        分组交换网以<font color=red>“分组”</font>作为数据传输单元。</p>
+<p>​                        <font color=red>依次</font>把各分组发送到接收端。</p>
+<p>​                        最后，在<font color=red>接收端把收到的数据恢复</font>成为原来的报文。</p>
+<p>​                每一个分组的首部都含有<font color=red>地址（诸如目的地址和源地址）等控制信息</font>。</p>
+<p>​                每个分组在互联网中<font color=red>独立地选择传输路径</font>。</p>
+<p>​                <font color=red>无需建立电路</font>，有数据包就直接发出去</p>
+<p>​                <strong>优点：</strong></p>
+<p>​                        网络稳定（robust）</p>
+<p>​                        资源利用率高</p>
+<p>​                        整体交换速率高</p>
+<p>​                <strong>缺点：</strong></p>
+<p>​                        无可靠性保障：丢包、延时长、抖动</p>
+]]></content>
+      <categories>
+        <category>大学</category>
+        <category>大三</category>
+        <category>计网</category>
+      </categories>
+      <tags>
+        <tag>计算机基础</tag>
+      </tags>
+  </entry>
 </search>
