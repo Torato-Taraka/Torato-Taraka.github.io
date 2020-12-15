@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello Hexo</title>
+    <url>/2020/12/07/hello-hexo-0/</url>
+    <content><![CDATA[<h1 id="啊！我终于搞定Hexo了！"><a href="#啊！我终于搞定Hexo了！" class="headerlink" title="啊！我终于搞定Hexo了！"></a>啊！我终于搞定Hexo了！</h1><p><strong>我等这一天已经等了太久了</strong><br>很久以前就开始想着要搞一个个人网站，但是关于服务器部署啊，前端开发啊什么的真的一窍不通，偶然的机会让我知道了Hexo这种神器，真的难以想象的激动</p>
+<ul>
+<li>入门很简单，有GitHub账号就行</li>
+<li>主题替换有些难度</li>
+<li>用起来非常爽</li>
+</ul>
+<a id="more"></a>
+<p>参考了非常多的文章，感谢这些大佬留下了教程！！！<br><a href="url">http://yearito.cn/</a></p>
+<hr>
+<p>小测验<br><figure class="highlight python"><figcaption><span>小测验</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">res = requests.get(<span class="string">&quot;www.baidu.com&quot;</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>try</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计网复习（2）</title>
     <url>/2020/12/15/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%EF%BC%882%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h3 id="1、物理层"><a href="#1、物理层" class="headerlink" title="1、物理层"></a>1、物理层</h3><p>物理层是网络的基础，物理层介质包含有线、无线、光纤等，决定了网络的传输速度</p>
+    <content><![CDATA[<h1 id="第二章-物理层"><a href="#第二章-物理层" class="headerlink" title="第二章 物理层"></a>第二章 物理层</h1><h3 id="1、物理层"><a href="#1、物理层" class="headerlink" title="1、物理层"></a>1、物理层</h3><p>物理层是网络的基础，物理层介质包含有线、无线、光纤等，决定了网络的传输速度</p>
 <p>物理层的关键是如何使用信号（电磁波）来发送比特，称为<font color=red>调制/解调</font></p>
 <a id="more"></a>
-
 <h3 id="2、数据信息系统"><a href="#2、数据信息系统" class="headerlink" title="2、数据信息系统"></a>2、数据信息系统</h3><p>一个数据通信系统包括三大部分：</p>
 <ul>
 <li>源系统（或发送端、发送方）</li>
@@ -45,7 +67,7 @@
 </li>
 <li>信道——一般用来表示向某一个方向传送信息的媒体</li>
 <li>信噪比——信号的平均功率和噪声的平均功率之比<ul>
-<li>信噪比（dB） = 10 log<del>10</del> ( S / N ) （dB） </li>
+<li>信噪比（dB） = $10 log_{10} ( S / N ) （dB） $</li>
 </ul>
 </li>
 </ul>
@@ -56,38 +78,38 @@
 </ul>
 <p>如果<font color=red>不考虑信噪比</font>（信道是理想的）</p>
 <ul>
-<li><p>==Nyquist’s theorem（尼奎斯特理论）==</p>
+<li><font color=orange>Nyquist’s theorem（尼奎斯特理论）</font>
 </li>
 <li><p>根据信道带宽(W)和信号等级(V)</p>
 </li>
 </ul>
-<figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">Max.data_rate = <span class="number">2</span>W <span class="built_in">log</span>~<span class="number">2</span>~ V bits/<span class="built_in">sec</span></span><br><span class="line">其中信号等级 V 表示一个符号（码元）可以代表信号的个数</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight gams"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Max</span>.data_rate = <span class="number">2</span>W <span class="built_in">log2</span> V bits/sec</span><br><span class="line">其中信号等级 V 表示一个符号（码元）可以代表信号的个数</span><br></pre></td></tr></table></figure>
 <p>如果<font color=red>考虑信噪比</font></p>
 <ul>
-<li><p>==香农 (Shannon)理论==</p>
+<li><font color=orange>香农 (Shannon)理论</font>
 </li>
 <li><p>信道的极限信息传输速率  C  可表达为：</p>
 </li>
 </ul>
-<figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">C =  W <span class="built_in">log</span>~<span class="number">2</span>~ (<span class="number">1</span>+ S / <span class="built_in">N</span> ) (bit/s)</span><br><span class="line">W 为信道的带宽（以 Hz 为单位）</span><br><span class="line">S 为信道内所传信号的平均功率</span><br><span class="line"><span class="built_in">N</span> 为信道内部的高斯噪声功率</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line"><span class="built_in">C</span> <span class="operator">=</span>  <span class="variable">W</span> <span class="variable">log2</span> <span class="punctuation">(</span><span class="number">1</span><span class="operator">+</span> <span class="variable">S</span> <span class="operator">/</span> <span class="built_in">N</span> <span class="punctuation">)</span> <span class="punctuation">(</span><span class="variable">bit</span><span class="operator">/</span><span class="variable">s</span><span class="punctuation">)</span></span><br><span class="line"><span class="variable">W</span> 为信道的带宽（以 <span class="variable">Hz</span> 为单位）</span><br><span class="line"><span class="variable">S</span> 为信道内所传信号的平均功率</span><br><span class="line"><span class="built_in">N</span> 为信道内部的高斯噪声功率</span><br></pre></td></tr></table></figure>
 <h3 id="5、信道复用技术"><a href="#5、信道复用技术" class="headerlink" title="5、信道复用技术"></a><font color = red>5、信道复用技术</font></h3><p>复用 (multiplexing)  是通信技术中的基本概念</p>
 <p>它允许用户使用一个 共享 信道进行通信，降低成本，提高利用率</p>
 <h4 id="频分复用"><a href="#频分复用" class="headerlink" title="频分复用"></a>频分复用</h4><p>FDM Frequency Division Multiplexing</p>
-<p><font color = blue>所有用户在同样的时间占用==不同==的带宽资源</font></p>
+<font color = blue>所有用户在同样的时间占用<font color=orange>不同</font>的带宽资源</font>
+
 <p><img src="https://i.loli.net/2020/12/15/WKc5BNZoIUyCbXk.png" alt="2-1.png"></p>
 <h4 id="时分复用"><a href="#时分复用" class="headerlink" title="时分复用"></a>时分复用</h4><p>TDM Time Division Multiplexing</p>
 <p>将时间划分为一段段等长的时分复用帧（TDM 帧）。每一个时分复用的用户在每一个 TDM 帧中占用固定序号的时隙</p>
 <p>每一个用户所占用的时隙是周期性地出现（其周期就是 TDM 帧的长度）</p>
 <p>TDM 信号也称为等时(isochronous)信号</p>
-<p><font color = blue>所有用户在不同的时间占用==同样==的频带宽度</font></p>
+<font color = blue>所有用户在不同的时间占用<font color=orange>同样</font>的频带宽度</font>
+
 <p><img src="https://i.loli.net/2020/12/15/3zH7vKYEwU8MFNQ.png" alt="2-2.png"></p>
 <p>时分复用可能会造成线路资源的浪费</p>
 <h4 id="统计时分复用"><a href="#统计时分复用" class="headerlink" title="统计时分复用"></a>统计时分复用</h4><p>STDM Statistic TDM</p>
 <h4 id="波分复用"><a href="#波分复用" class="headerlink" title="波分复用"></a>波分复用</h4><p>WDM Wavelength Division Multiplexing</p>
 <p>波分复用就是光的频分复用</p>
-<h4 id="码分复用"><a href="#码分复用" class="headerlink" title="码分复用"></a>码分复用</h4><p>CDM Code Division Multiplexing</p>
+<h4 id="码分复用"><a href="#码分复用" class="headerlink" title="码分复用"></a><font color=orange>码分复用</font></h4><p>CDM Code Division Multiplexing</p>
 <p>常用的名词是<font color=red>码分多址 CDMA</font>（Code Division Multiple Access）</p>
 <p>各用户使用经过特殊挑选的不同码型，因此彼此不会造成干扰</p>
 <ul>
@@ -111,7 +133,7 @@
 <li>一个码片向量和该码片反码的向量的规格化内积值是 –1</li>
 </ul>
 </li>
-<li><p><strong>==例子：==</strong></p>
+<li><p><strong><font color=orange>例子：</font></strong></p>
 <ul>
 <li>A=（-1-1-1+1+1-1+1+1），B=（-1-1+1-1+1+1+1-1）<br>，C=（-1+1-1+1+1+1-1-1），D=（-1+1-1-1-1-1+1-1）</li>
 <li>如果A、B、C同时传输0，则结果码片序列？<ul>
@@ -125,6 +147,109 @@
 </ul>
 </li>
 </ul>
+<h3 id="6、宽带接入技术"><a href="#6、宽带接入技术" class="headerlink" title="6、宽带接入技术"></a>6、宽带接入技术</h3><p>美国联邦通信委员会 FCC 认为只要双向速率之和超过<font color=red> 200 kbit/s </font>就是宽带。</p>
+<h4 id="ADSL"><a href="#ADSL" class="headerlink" title="ADSL"></a>ADSL</h4><p>把 0~4 kHz 低端频谱留给传统电话使用，而把原来没有被利用的高端频谱留给用户上网使用。</p>
+<h4 id="HFC"><a href="#HFC" class="headerlink" title="HFC"></a>HFC</h4><p>HFC (Hybrid Fiber Coax) 网是在目前覆盖面很广的有线电视网 CATV 的基础上开发的一种居民宽带接入网</p>
+<p>现有的 CATV 网是树形拓扑结构的同轴电缆网络，它采用模拟技术的频分复用对电视节目进行单向传输</p>
+<h4 id="FTTx"><a href="#FTTx" class="headerlink" title="FTTx"></a>FTTx</h4><p>FTTx 是一种实现宽带居民接入网的方案，代表多种宽带光纤接入方式</p>
+<ul>
+<li>光纤到户 FTTH (Fiber To The Home)：光纤一直铺设到用户家庭，可能是居民接入网最后的解决方法。</li>
+<li>光纤到大楼 FTTB (Fiber To The Building)：光纤进入大楼后就转换为电信号，然后用电缆或双绞线分配到各用户</li>
+<li>光纤到路边 FTTC (Fiber To The Curb)：光纤铺到路边，从路边到各用户可使用星形结构双绞线作为传输媒体</li>
+</ul>
+<h3 id="课后习题"><a href="#课后习题" class="headerlink" title="课后习题"></a>课后习题</h3><h5 id="2-01-物理层要解决哪些问题？物理层的主要特点是什么？"><a href="#2-01-物理层要解决哪些问题？物理层的主要特点是什么？" class="headerlink" title="2-01 物理层要解决哪些问题？物理层的主要特点是什么？"></a><strong>2-01</strong> <strong>物理层要解决哪些问题？物理层的主要特点是什么？</strong></h5><p>物理层要解决的主要问题：</p>
+<ul>
+<li><p>物理层要尽可能地屏蔽掉物理设备和传输媒体，通信手段的不同，使数据链路层感觉不到这些差异，只考虑完成本层的协议和服务。</p>
+</li>
+<li><p>给其服务用户（数据链路层）在一条物理的传输媒体上传送和接收比特流（一般为串行按顺序传输的比特流）的能力，为此，物理层应该解决物理连接的建立、维持和释放问题。</p>
+</li>
+<li><p>在两个相邻系统之间唯一地标识数据电路</p>
+</li>
+</ul>
+<p>物理层的主要特点：</p>
+<ul>
+<li>由于在OSI之前，许多物理规程或协议已经制定出来了，而且在数据通信领域中，这些物理规程已被许多商品化的设备所采用，加之，物理层协议涉及的范围广泛，所以至今没有按OSI的抽象模型制定一套新的物理层协议，而是沿用已存在的物理规程，将物理层确定为描述与传输媒体接口的机械，电气，功能和规程特性。</li>
+<li>由于物理连接的方式很多，传输媒体的种类也很多，因此，具体的物理协议相当复杂。</li>
+</ul>
+<p><strong>2-02</strong> <strong>归层与协议有什么区别？</strong></p>
+<p>规程专指物理层协议</p>
+<p><strong>2-03</strong> <strong>试给出数据通信系统的模型并说明其主要组成构建的作用。</strong></p>
+<p>源点：源点设备产生要传输的数据。源点又称为源站。</p>
+<p>发送器：通常源点生成的数据要通过发送器编码后才能在传输系统中进行传输。</p>
+<p>接收器：接收传输系统传送过来的信号，并将其转换为能够被目的设备处理的信息。</p>
+<p>终点：终点设备从接收器获取传送过来的信息。终点又称为目的站</p>
+<p>传输系统：信号物理通道</p>
+<p><strong>2-04</strong> <strong>试解释以下名词：数据，信号，模拟数据，模拟信号，基带信号，带通信号，数字数据，数字信号，码元，单工通信，半双工通信，全双工通信，串行传输，并行传输</strong>。</p>
+<p><strong>数据</strong>：是运送信息的实体。</p>
+<p><strong>信号：</strong>则是数据的电气的或电磁的表现。</p>
+<p><strong>模拟数据</strong>：运送信息的模拟信号。</p>
+<p><strong>模拟信号</strong>：连续变化的信号。</p>
+<p><strong>数字信号</strong>：取值为有限的几个离散值的信号。</p>
+<p><strong>数字数据</strong>：取值为不连续数值的数据。码元(code)：在使用时间域（或简称为时域）的波形表示数字信号时，代表不同离散数值的基本波形。</p>
+<p><strong>单工通信</strong>：即只有一个方向的通信而没有反方向的交互。</p>
+<p><strong>半双工通信</strong>：即通信和双方都可以发送信息，但不能双方同时发送（当然也不能同时接收）。这种通信方式是一方发送另一方接收，过一段时间再反过来。</p>
+<p><strong>全双工通信</strong>：即通信的双方可以同时发送和接收信息。</p>
+<p><strong>基带信号</strong>（即基本频带信号）——来自信源的信号。像计算机输出的代表各种文字或图像文件的数据信号都属于基带信号。</p>
+<p><strong>带通信号</strong>——把基带信号经过载波调制后，把信号的频率范围搬移到较高的频段以便在信道中传输（即仅在一段频率范围内能够通过信道）。</p>
+<p><strong>2-05</strong> <strong>物理层的接口有哪几个方面的特性？个包含些什么内容？</strong> </p>
+<p>（1）机械特性  明接口所用的接线器的形状和尺寸、引线数目和排列、固定和锁定装置等等。</p>
+<p>（2）电气特性  指明在接口电缆的各条线上出现的电压的范围。</p>
+<p>（3）功能特性　指明某条线上出现的某一电平的电压表示何意。</p>
+<p>（4）规程特性说明对于不同功能的各种可能事件的出现顺序。</p>
+<p><strong>2-06</strong> <strong>数据在信道重的传输速率受哪些因素的限制？信噪比能否任意提高？香农公式在数据通信中的意义是什么？“比特/每秒”和“码元/每秒”有何区别？</strong> </p>
+<p>码元传输速率受奈氏准则的限制</p>
+<p>信息传输速率受香农公式的限制      </p>
+<p>香农公式在数据通信中的意义是：只要信息传输速率低于信道的极限传信率，就可实现无差传输。</p>
+<p>比特/s是信息传输速率的单位码元传输速率也称为调制速率、波形速率或符号速率。一个码元不一定对应于一个比特。</p>
+<h5 id="2-07-假定某信道受奈氏准则限制的最高码元速率为20000码元-秒。如果采用振幅调制，把码元的振幅划分为16个不同等级来传送，那么可以获得多高的数据率（b-s）"><a href="#2-07-假定某信道受奈氏准则限制的最高码元速率为20000码元-秒。如果采用振幅调制，把码元的振幅划分为16个不同等级来传送，那么可以获得多高的数据率（b-s）" class="headerlink" title="2-07 假定某信道受奈氏准则限制的最高码元速率为20000码元/秒。如果采用振幅调制，把码元的振幅划分为16个不同等级来传送，那么可以获得多高的数据率（b/s）?"></a><strong>2-07</strong> <strong>假定某信道受奈氏准则限制的最高码元速率为20000码元/秒。如果采用振幅调制，把码元的振幅划分为16个不同等级来传送，那么可以获得多高的数据率（b/s）?</strong></h5><p>$C=Rlog_2(16)=20000b/s*4=80000b/s$</p>
+<h5 id="2-08-假定要用3KHz带宽的电话信道传送64kb-s的数据（无差错传输），试问这个信道应具有多高的信噪比（分别用比值和分贝来表示？这个结果说明什么问题？）"><a href="#2-08-假定要用3KHz带宽的电话信道传送64kb-s的数据（无差错传输），试问这个信道应具有多高的信噪比（分别用比值和分贝来表示？这个结果说明什么问题？）" class="headerlink" title="2-08 假定要用3KHz带宽的电话信道传送64kb/s的数据（无差错传输），试问这个信道应具有多高的信噪比（分别用比值和分贝来表示？这个结果说明什么问题？）"></a><strong>2-08</strong> <strong>假定要用3KHz带宽的电话信道传送64kb/s的数据（无差错传输），试问这个信道应具有多高的信噪比（分别用比值和分贝来表示？这个结果说明什么问题？）</strong></h5><p>$C=Wlog_2(1+\dfrac{S}{N})，W=3KHz，C=64KHz—&gt;\dfrac{S}{N}=64.2dB$</p>
+<p>是个信噪比要求很高的信源</p>
+<h5 id="2-09-用香农公式计算一下，假定信道带宽为为3100Hz，最大信道传输速率为35Kb-s，那么若想使最大信道传输速率增加20％，问信噪比S-N应增大到多少倍？如果在刚才计算出的基础上将信噪比S-N应增大到多少倍？如果在刚才计算出的基础上将信噪比S-N再增大到十倍，问最大信息速率能否再增加20％？"><a href="#2-09-用香农公式计算一下，假定信道带宽为为3100Hz，最大信道传输速率为35Kb-s，那么若想使最大信道传输速率增加20％，问信噪比S-N应增大到多少倍？如果在刚才计算出的基础上将信噪比S-N应增大到多少倍？如果在刚才计算出的基础上将信噪比S-N再增大到十倍，问最大信息速率能否再增加20％？" class="headerlink" title="2-09 用香农公式计算一下，假定信道带宽为为3100Hz，最大信道传输速率为35Kb/ｓ，那么若想使最大信道传输速率增加20％，问信噪比Ｓ/Ｎ应增大到多少倍？如果在刚才计算出的基础上将信噪比Ｓ/Ｎ应增大到多少倍？如果在刚才计算出的基础上将信噪比Ｓ/Ｎ再增大到十倍，问最大信息速率能否再增加20％？"></a><strong>2-09</strong> <strong>用香农公式计算一下，假定信道带宽为为3100Hz，最大信道传输速率为35Kb/ｓ，那么若想使最大信道传输速率增加20％，问信噪比Ｓ/Ｎ应增大到多少倍？如果在刚才计算出的基础上将信噪比Ｓ/Ｎ应增大到多少倍？如果在刚才计算出的基础上将信噪比Ｓ/Ｎ再增大到十倍，问最大信息速率能否再增加20％？</strong></h5><p>$C = W log_2(1+\dfrac{S}{N}) b/s—&gt;SN1=2\dfrac{C_1}{W}-1=2\dfrac{35000}{3100}-1$</p>
+<p>$SN_2=2\dfrac{C_2}{W}-1=2\dfrac{1.6C_1}{W}-1=2\dfrac{1.6*35000}{3100}-1$</p>
+<p>$\dfrac{SN_2}{SN_1}=100$信噪比应增大到约100倍。</p>
+<p>$C_3=Wlong_2（1+SN_3）=Wlog_2（1+10SN_2）—&gt;\dfrac{C_3}{C_2}=18.5%$</p>
+<p>如果在此基础上将信噪比S/N再增大到10倍，最大信息通率只能再增加18.5%左右</p>
+<p><strong>2-10</strong> <strong>常用的传输媒体有哪几种？各有何特点？</strong></p>
+<p>双绞线 </p>
+<p>屏蔽双绞线 STP (Shielded Twisted Pair) </p>
+<p>无屏蔽双绞线 UTP (Unshielded Twisted Pair) </p>
+<p>同轴电缆 50 W </p>
+<p>同轴电缆 75 W </p>
+<p>同轴电缆 </p>
+<p>光缆无线传输：短波通信/微波/卫星通信</p>
+<p><strong>2-11</strong> <strong>假定有一种双绞线的衰减是0.7dB/km(在 1 kHz时)，若容许有20dB的衰减，试问使用这种双绞线的链路的工作距离有多长？如果要双绞线的工作距离增大到100公里，试 应当使衰减降低到多少？</strong></p>
+<p>使用这种双绞线的链路的工作距离为=20/0.7=28.6km</p>
+<p>衰减应降低到20/100=0.2db</p>
+<h5 id="2-12-试计算工作在1200nm到1400nm之间以及工作在1400nm到1600nm之间的光波的频带宽度。假定光在光纤中的传播速率为2-10e8m-s"><a href="#2-12-试计算工作在1200nm到1400nm之间以及工作在1400nm到1600nm之间的光波的频带宽度。假定光在光纤中的传播速率为2-10e8m-s" class="headerlink" title="2-12 试计算工作在1200nm到1400nm之间以及工作在1400nm到1600nm之间的光波的频带宽度。假定光在光纤中的传播速率为2*10e8m/s."></a><strong>2-12</strong> <strong>试计算工作在1200nm到1400nm之间以及工作在1400nm到1600nm之间的光波的频带宽度。假定光在光纤中的传播速率为2*10e8m/s.</strong></h5><p>$V=L*F—&gt;F=\dfrac{V}{L}—&gt;B=F_2-F_1=\dfrac{V}{L_1}-\dfrac{V}{L_2}$</p>
+<p>1200nm到1400nm：带宽=23.8THZ</p>
+<p>1400nm到1600nm：带宽=17.86THZ</p>
+<h5 id="2-13-为什么要使用信道复用技术？常用的信道复用技术有哪些？"><a href="#2-13-为什么要使用信道复用技术？常用的信道复用技术有哪些？" class="headerlink" title="2-13 为什么要使用信道复用技术？常用的信道复用技术有哪些？"></a><strong>2-13</strong> <strong>为什么要使用信道复用技术？常用的信道复用技术有哪些？</strong></h5><p>为了通过共享信道、最大限度提高信道利用率。频分、时分、码分、波分。</p>
+<p><strong>2-14</strong> <strong>试写出下列英文缩写的全文，并做简单的解释。</strong></p>
+<p><strong>FDM,TDM,STDM,WDM,DWDM,CDMA,SONET,SDH,STM-1 ,OC-48.</strong></p>
+<p>FDM(frequency division multiplexing)</p>
+<p>TDM(Time Division Multiplexing)</p>
+<p>STDM(Statistic Time Division Multiplexing)</p>
+<p>WDM(Wave Division Multiplexing)</p>
+<p>DWDM(Dense Wave Division Multiplexing)</p>
+<p>CDMA(Code Wave Division Multiplexing)</p>
+<p>SONET(Synchronous Optical Network)同步光纤网</p>
+<p>SDH(Synchronous Digital Hierarchy)同步数字系列</p>
+<p>STM-1(Synchronous Transfer Module)第1级同步传递模块</p>
+<p>OC-48(Optical Carrier)第48级光载波</p>
+<p><strong>2-15</strong> <strong>码分多址CDMA为什么可以使所有用户在同样的时间使用同样的频带进行通信而不会互相干扰？这种复用方法有何优缺点？</strong></p>
+<p>各用户使用经过特殊挑选的相互正交的不同码型，因此彼此不会造成干扰。  这种系统发送的信号有很强的抗干扰能力，其频谱类似于白噪声，不易被敌人发现。占用较大的带宽。</p>
+<h5 id="2-16-共有4个站进行码分多址通信。4个站的码片序列为"><a href="#2-16-共有4个站进行码分多址通信。4个站的码片序列为" class="headerlink" title="2-16 共有4个站进行码分多址通信。4个站的码片序列为"></a><strong>2-16</strong> <strong>共有4个站进行码分多址通信。4个站的码片序列为</strong></h5><p><strong>A：（－1－1－1＋1＋1－1＋1＋1） B：（－1－1＋1－1＋1＋1＋1－1）</strong></p>
+<p><strong>C：（－1＋1－1＋1＋1＋1－1－1） D：（－1＋1－1－1－1－1＋1－1）</strong></p>
+<p><strong>现收到这样的码片序列S：（－1＋1－3＋1－1－3＋1＋1）。问哪个站发送数据了？发送数据的站发送的是0还是1？</strong></p>
+<p>S•A=（＋1－1＋3＋1－1＋3＋1＋1）／8=1，  A发送1</p>
+<p>S•B=（＋1－1－3－1－1－3＋1－1）／8=－1， B发送0</p>
+<p>S•C=（＋1＋1＋3＋1－1－3－1－1）／8=0，  C无发送</p>
+<p>S•D=（＋1＋1＋3－1＋1＋3＋1－1）／8=1，  D发送1</p>
+<h5 id="2-17-试比较xDSL、HFC以及FTTx接入技术的优缺点？"><a href="#2-17-试比较xDSL、HFC以及FTTx接入技术的优缺点？" class="headerlink" title="2-17 试比较xDSL、HFC以及FTTx接入技术的优缺点？"></a><strong>2-17</strong> <strong>试比较xDSL、HFC以及FTTx接入技术的优缺点？</strong></h5><p>xDSL  技术就是用数字技术对现有的模拟电话用户线进行改造，使它能够承载宽带业务。成本低，易实现，但带宽和质量差异性大。</p>
+<p>HFC网的最大的优点具有很宽的频带，并且能够利用已经有相当大的覆盖面的有线电视网。要将现有的450 MHz 单向传输的有线电视网络改造为 750 MHz 双向传输的 HFC 网需要相当的资金和时间。</p>
+<p>FTTx（光纤到……）这里字母 x  可代表不同意思。可提供最好的带宽和质量、但现阶段线路和工程成本太大。</p>
+<p><strong>2-18为什么在ASDL技术中，在不到1MHz的带宽中却可以传送速率高达每秒几个兆比？</strong></p>
+<p>靠先进的DMT编码，频分多载波并行传输、使得每秒传送一个码元就相当于每秒传送多个比特</p>
 ]]></content>
       <categories>
         <category>大学</category>
@@ -136,36 +261,97 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello Hexo</title>
-    <url>/2020/12/07/hello-hexo-0/</url>
-    <content><![CDATA[<h1 id="啊！我终于搞定Hexo了！"><a href="#啊！我终于搞定Hexo了！" class="headerlink" title="啊！我终于搞定Hexo了！"></a>啊！我终于搞定Hexo了！</h1><p><strong>我等这一天已经等了太久了</strong><br>很久以前就开始想着要搞一个个人网站，但是关于服务器部署啊，前端开发啊什么的真的一窍不通，偶然的机会让我知道了Hexo这种神器，真的难以想象的激动</p>
+    <title>计网复习（3）</title>
+    <url>/2020/12/15/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%EF%BC%883%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="第三章-数据链路层"><a href="#第三章-数据链路层" class="headerlink" title="第三章 数据链路层"></a>第三章 数据链路层</h1><h3 id="1、数据链路层"><a href="#1、数据链路层" class="headerlink" title="1、数据链路层"></a>1、数据链路层</h3><ul>
+<li><p>针对直接相连的两个节点之间的通信</p>
 <ul>
-<li>入门很简单，有GitHub账号就行</li>
-<li>主题替换有些难度</li>
-<li>用起来非常爽</li>
+<li>点对点信道</li>
+<li>这种信道使用一对一的点对点通信方式<ul>
+<li>链路(link)是一条<font color=orange>无源的点到点的物理线路段</font>，中间没有任何其他的交换结点<ul>
+<li>一条链路只是一条通路的一个组成部分</li>
+</ul>
+</li>
+<li>数据链路(data link) 除了<font color=orange>物理线路</font>外，还必须有<font color=orange>通信协议</font>来控制这些数据的传输。若把实现这些协议的硬件和软件加到链路上，就构成了数据链路<ul>
+<li>现在最常用的方法是使用<font color=orange>适配器（即网卡）</font>来实现这些协议的硬件和软件</li>
+<li><font color=blue>一般的适配器都包括了数据链路层和物理层这两层的功能</font></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>广播信道<ul>
+<li>这种信道使用一对多的广播通信方式，因此过程比较复杂</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <a id="more"></a>
-<p>参考了非常多的文章，感谢这些大佬留下了教程！！！<br><a href="url">http://yearito.cn/</a></p>
-<hr>
-<p>小测验</p>
-<figure class="highlight python"><figcaption><span>小测验</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">res = requests.get(<span class="string">&quot;www.baidu.com&quot;</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
-]]></content>
+<h3 id="2、解决什么问题"><a href="#2、解决什么问题" class="headerlink" title="2、解决什么问题"></a><font color=red>2、解决什么问题</font></h3><ul>
+<li><font color=orange>成帧</font></li>
+<li><font color=orange>差错检测和纠正</font></li>
+<li><font color=orange>广播信道的接入（MAC）</font>
+
+</li>
+</ul>
+<h3 id="3、从层次上来看数据的流动"><a href="#3、从层次上来看数据的流动" class="headerlink" title="3、从层次上来看数据的流动"></a>3、从层次上来看数据的流动</h3><p><img src="https://i.loli.net/2020/12/15/zRxfHryv62OpmIW.png" alt="3-1.png"></p>
+<h3 id="4、封装成帧"><a href="#4、封装成帧" class="headerlink" title="4、封装成帧"></a>4、封装成帧</h3><p>封装成帧(framing)就是在一段数据的前后分别添加首部和尾部，然后就构成了一个帧</p>
+<p>帧定界的方法：</p>
+<ul>
+<li><strong>字节计数</strong>：帧里有多少字节的数据，就在帧前面添加这个计数值</li>
+<li><strong>控制字符</strong>：SOH、EOT</li>
+<li><strong>透明传输</strong>：字节填充解决透明传输，转义字符ESC</li>
+<li><strong>比特填充</strong>：连续5个1后填充0</li>
+</ul>
+<h3 id="5、差错控制"><a href="#5、差错控制" class="headerlink" title="5、差错控制"></a>5、差错控制</h3><ul>
+<li>纠错<ul>
+<li>纠错码——Hamming Code</li>
+<li><font color=blue>但是错误纠正需要添加大量的附加码</font></li>
+</ul>
+</li>
+<li>检错<ul>
+<li>奇偶检验<ul>
+<li>最简单的检错码是添加一位数据，从而使整个数据所有位的和为奇数或者偶数</li>
+<li>交错校验</li>
+</ul>
+</li>
+<li>校验和<ul>
+<li>Internet 16位补码校验和：不寻常的是将高位的溢出加到低位去</li>
+<li>循环冗余检错码CRC<ul>
+<li>双方预先商定一个生成多项式（Generator polynomial，除数）</li>
+<li>假设G(x)的为r比特。在数据的低位端<font color=red>加上（r-1）个0</font></li>
+<li>生成的数据除以G(x) （模2除）</li>
+<li>得到余数后，将前面生成的数据减去余数（模2减）。结果为最终的数据（包括校验位）</li>
+<li><img src="https://i.loli.net/2020/12/15/OyzP9uZd1WNkfBb.png" alt="3-2.png"></li>
+<li>接收方将接收到的数据除以G(x)，如果<font color=red>能够整除</font>，则认为传输正确，否则，传输错误</li>
+<li>能够检测所有的1位、2位、奇数个位错误、长度小于等于r的突发错误</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>链路层的错误控制有哪两种方式？有以下两种情况：1. 链接并不是可靠的（即经常会发生错误）；2. 链接是可靠的（错误很少发生）。请问哪种方式更适合情况1，哪种方式更适合情况2？<ul>
+<li>检错和纠错，检错适合情况1，纠错适合情况2</li>
+</ul>
+</li>
+</ul>
+<h3 id="6、"><a href="#6、" class="headerlink" title="6、"></a>6、</h3>]]></content>
       <categories>
-        <category>技术</category>
-        <category>博客</category>
+        <category>大学</category>
+        <category>大三</category>
+        <category>计网</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>try</tag>
+        <tag>计算机基础</tag>
       </tags>
   </entry>
   <entry>
     <title>计网复习（1）</title>
     <url>/2020/12/08/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h3><p>&emsp;&emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
+    <content><![CDATA[<h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h1><h3 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h3><p>&emsp;&emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
 <p>&emsp;&emsp;软件和硬件组成</p>
 <a id="more"></a>
-
 <h3 id="2、互联网基础结构发展的三个阶段"><a href="#2、互联网基础结构发展的三个阶段" class="headerlink" title="2、互联网基础结构发展的三个阶段"></a>2、互联网基础结构发展的三个阶段</h3><p>&emsp;&emsp;第一阶段：从单个网络 ARPANET 向互联网发展的过程。</p>
 <p>&emsp;&emsp;第二阶段：建成了三级结构的互联网。</p>
 <p>&emsp;&emsp;第三阶段：逐渐形成了多层次 ISP （Internet Service Provider）结构的互联网。</p>
@@ -233,7 +419,7 @@
 <p>&emsp;&emsp;<font color=red>信道利用率</font>指出某信道有百分之几的时间是被利用的（有数据通过）。完全空闲的信道的利用率是零。</p>
 <p>&emsp;&emsp;<font color=red>网络利用率</font>则是全网络的<font color=red>信道利用率的加权平均值</font>。</p>
 <p>&emsp;&emsp;信道利用率并非越高越好。<font color=blue>当某信道的利用率增大时，该信道引起的时延也就迅速增加</font>。</p>
-<p>&emsp;&emsp;$D = \dfrac{D_0}{1-U}$，其中，D表示当前时延，D<del>0</del>表示空闲时的时延，U是网络利用率，在0到1之间。</p>
+<p>&emsp;&emsp;$D = \dfrac{D_0}{1-U}$，其中，D表示当前时延，$D_0$表示空闲时的时延，U是网络利用率，在0到1之间。</p>
 <h5 id="非性能指标"><a href="#非性能指标" class="headerlink" title="非性能指标"></a>非性能指标</h5><p>&emsp;&emsp;费用</p>
 <p>&emsp;&emsp;质量</p>
 <p>&emsp;&emsp;标准化</p>
@@ -243,63 +429,64 @@
 <h3 id="8、网络协议的三个组成要素"><a href="#8、网络协议的三个组成要素" class="headerlink" title="8、网络协议的三个组成要素"></a>8、网络协议的三个组成要素</h3><p>&emsp;&emsp;语法</p>
 <p>&emsp;&emsp;语义</p>
 <p>&emsp;&emsp;同步</p>
-<h3 id="9、协议体系结构"><a href="#9、协议体系结构" class="headerlink" title="9、协议体系结构"></a>9、协议体系结构</h3><table>
+<h3 id="9、协议体系结构"><a href="#9、协议体系结构" class="headerlink" title="9、协议体系结构"></a>9、协议体系结构</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">OSI体系结构</th>
-<th align="center">TCP/IP体系结构</th>
-<th align="center">五层协议体系结构</th>
+<th style="text-align:center">OSI体系结构</th>
+<th style="text-align:center">TCP/IP体系结构</th>
+<th style="text-align:center">五层协议体系结构</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">应用层</td>
-<td align="center"></td>
-<td align="center"></td>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">表示层</td>
-<td align="center">应用层</td>
-<td align="center">应用层</td>
+<td style="text-align:center">表示层</td>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">应用层</td>
 </tr>
 <tr>
-<td align="center">会话层</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">会话层</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">运输层</td>
-<td align="center">运输层（TCP或UDP）</td>
-<td align="center">运输层</td>
+<td style="text-align:center">运输层</td>
+<td style="text-align:center">运输层（TCP或UDP）</td>
+<td style="text-align:center">运输层</td>
 </tr>
 <tr>
-<td align="center">网络层</td>
-<td align="center">网际层IP</td>
-<td align="center">网络层</td>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">网际层IP</td>
+<td style="text-align:center">网络层</td>
 </tr>
 <tr>
-<td align="center">数据链路层</td>
-<td align="center">网络接口层</td>
-<td align="center">数据链路层</td>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">网络接口层</td>
+<td style="text-align:center">数据链路层</td>
 </tr>
 <tr>
-<td align="center">物理层</td>
-<td align="center"></td>
-<td align="center">物理层</td>
+<td style="text-align:center">物理层</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">物理层</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="10、课后习题"><a href="#10、课后习题" class="headerlink" title="10、课后习题"></a>10、课后习题</h3><p><strong>1-01</strong> <strong>计算机网络向用户可以提供那些服务？</strong></p>
 <p>连通性和共享</p>
-<p><strong>1-02</strong> <strong>简述分组交换的要点。</strong></p>
-<ul>
+<h5 id="1-02-简述分组交换的要点。"><a href="#1-02-简述分组交换的要点。" class="headerlink" title="1-02 简述分组交换的要点。"></a><strong>1-02</strong> <strong>简述分组交换的要点。</strong></h5><ul>
 <li><p>报文分组，加首部</p>
 </li>
 <li><p>经路由器储存转发</p>
 </li>
-<li><p>在目的地合并</p>
-</li>
+<li>在目的地合并</li>
 </ul>
-<p><strong>1-03</strong> <strong>试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。</strong></p>
-<ul>
+<h5 id="1-03-试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。"><a href="#1-03-试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。" class="headerlink" title="1-03 试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。"></a><strong>1-03</strong> <strong>试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。</strong></h5><ul>
 <li>电路交换：端对端通信质量因约定了通信资源获得可靠保障，对连续传送大量数据效率高。</li>
 <li>报文交换：无须预约传输带宽，动态逐段利用传输带宽对突发式数据通信效率高，通信迅速。</li>
 <li>分组交换：具有报文交换之高效、迅速的要点，且各分组小，路由灵活，网络生存性能好。</li>
@@ -340,14 +527,13 @@
 <li><p>本地接入网：主要支持用户的访问本地，实现散户接入，速率低。</p>
 </li>
 </ul>
-<p><strong>1-10</strong> <strong>试在下列条件下比较电路交换和分组交换。</strong></p>
-<p><strong>要传送的报文共x（bit）。从源点到终点共经过k段链路，每段链路的传播时延为d（s），数据率为b(b/s)。在电路交换时电路的建立时间为s(s)。在分组交换时分组长度为p(bit)，且各结点的排队等待时间可忽略不计。</strong></p>
+<h5 id="1-10-试在下列条件下比较电路交换和分组交换。"><a href="#1-10-试在下列条件下比较电路交换和分组交换。" class="headerlink" title="1-10 试在下列条件下比较电路交换和分组交换。"></a><strong>1-10</strong> <strong>试在下列条件下比较电路交换和分组交换。</strong></h5><p><strong>要传送的报文共x（bit）。从源点到终点共经过k段链路，每段链路的传播时延为d（s），数据率为b(b/s)。在电路交换时电路的建立时间为s(s)。在分组交换时分组长度为p(bit)，且各结点的排队等待时间可忽略不计。</strong></p>
 <p><strong>问在怎样的条件下，分组交换的时延比电路交换的要小？</strong>（提示：画一下草图观察k段链路共有几个结点。）</p>
 <p>线路交换时延：$kd + \dfrac{x}{b} + s$</p>
-<p>分组交换时延：$kd + \lceil\dfrac{x}{p}\rceil*\dfrac{p}{b} + (k-1)*\dfrac{p}{b}$，其中$(k-1)*\dfrac{p}{b}$表示K段传输中，有$(k-1)$次的储存转发延迟，当$s&gt;(k-1)\dfrac{p}{b}$时</p>
+<p>分组交换时延：$kd + \lceil\dfrac{x}{p}\rceil\dfrac{p}{b} + (k-1)\dfrac{p}{b}$，其中$(k-1)\dfrac{p}{b}$表示K段传输中，有$(k-1)$次的储存转发延迟，当$s&gt;(k-1)\dfrac{p}{b}$时</p>
 <p>电路交换的时延比分组交换的时延大，当x&gt;&gt;p，相反。</p>
 <p><strong>1-11</strong> <strong>在上题的分组交换网中，设报文长度和分组长度分别为x和(p+h)(bit),其中p为分组的数据部分的长度，而h为每个分组所带的控制信息固定长度，与p的大小无关。通信的两端共经过k段链路。链路的数据率为b(b/s)，但传播时延和结点的排队时间均可忽略不计。</strong> <strong>若打算使总的时延为最小，问分组的数据部分长度 p 应取为多大？</strong>（提示：参考图1-12的分组交换部分，观察总的时延是由哪几部分组成。）</p>
-<p>总时延D表达式，分组交换时延为：$D = kd + \dfrac{x}{p}*\dfrac{p+h}{b} + (k-1)*\dfrac{p+h}{b}$</p>
+<p>总时延D表达式，分组交换时延为：$D = kd + \dfrac{x}{p}\dfrac{p+h}{b} + (k-1)\dfrac{p+h}{b}$</p>
 <p>D对p求导后，令其值等于0，求得$p=\sqrt{\dfrac{xh}{k-1}}$</p>
 <p><strong>1-12</strong> <strong>因特网的两大组成部分（边缘部分与核心部分）的特点是什么？它们的工作方式各有什么特点？</strong></p>
 <ul>
@@ -360,29 +546,27 @@
 <p>前者严格区分服务和被服务者，后者无此区别。后者实际上是前者的双向应用。</p>
 <p><strong>1-14</strong> <strong>计算机网络有哪些常用的性能指标？</strong></p>
 <p>速率，带宽，吞吐量，时延，时延带宽积，往返时间RTT，利用率</p>
-<p><strong>1-15</strong> <strong>假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？</strong></p>
-<p>设网络利用率为U，网络时延为D，网络时延最小值为D<del>0</del>，U=90%</p>
-<p>$D=\dfrac{D_0}{1-U}–&gt;\dfrac{D}{D_0} = 10$</p>
+<h5 id="1-15-假定网络利用率达到了90-。试估计一下现在的网络时延是它的最小值的多少倍？"><a href="#1-15-假定网络利用率达到了90-。试估计一下现在的网络时延是它的最小值的多少倍？" class="headerlink" title="1-15 假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？"></a><strong>1-15</strong> <strong>假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？</strong></h5><p>设网络利用率为U，网络时延为D，网络时延最小值为$D_0$，U=90%</p>
+<p>$D=\dfrac{D_0}{1-U}—&gt;\dfrac{D}{D_0} = 10$</p>
 <p>现在的网络时延是最小值的10倍</p>
 <p><strong>1-16</strong> <strong>计算机通信网有哪些非性能特征？非性能特征与性能特征有什么区别？</strong></p>
 <p>非性能特征：宏观整体评价网络的外在表现。性能指标：具体定量描述网络的技术性能。</p>
-<p><strong>1-17</strong> <strong>收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×108m/s。试计算以下两种情况的发送时延和传播时延：</strong> </p>
-<p><strong>（1） 数据长度为107bit,数据发送速率为100kb/s。**</strong></p>
-<p><strong>（2） 数据长度为103bit,数据发送速率为1Gb/s。</strong></p>
+<h5 id="1-17-收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10-8-m-s。试计算以下两种情况的发送时延和传播时延："><a href="#1-17-收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10-8-m-s。试计算以下两种情况的发送时延和传播时延：" class="headerlink" title="1-17 收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10^8^m/s。试计算以下两种情况的发送时延和传播时延："></a><strong>1-17</strong> <strong>收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10^8^m/s。试计算以下两种情况的发送时延和传播时延：</strong></h5><p><strong>（1） 数据长度为10^7^bit,数据发送速率为100kb/s。**</strong></p>
+<p><strong>（2） 数据长度为10^3^bit,数据发送速率为1Gb/s。</strong></p>
 <p><strong>从上面的计算中可以得到什么样的结论？</strong></p>
-<p>（1）发送时延：ts=107/105=100s</p>
-<p>​          传播时延tp=106/(2×108)=0.005s</p>
-<p>（2）发送时延：ts =103/109=1µs</p>
-<p>​          传播时延：tp=106/(2×108)=0.005s</p>
+<p>（1）发送时延：$ts=10^7/10^5=100s$</p>
+<p>​          传播时延：$tp=10^6/(2×10^8)=0.005s$</p>
+<p>（2）发送时延：$ts =10^3/10^9=1µs$</p>
+<p>​          传播时延：$tp=10^6/(2×10^8)=0.005s$</p>
 <p>结论：若数据长度大而发送速率低，则在总的时延中，发送时延往往大于传播时延。但若数据长度短而发送速率高，则传播时延就可能是总时延中的主要成分。</p>
-<p><strong>1-18</strong> <strong>假设信号在媒体上的传播速度为2×108m/s.媒体长度L分别为：</strong></p>
+<p><strong>1-18</strong> <strong>假设信号在媒体上的传播速度为2×10^8m/s.媒体长度L分别为：</strong></p>
 <p><strong>（1）10cm（网络接口卡）（2）100m（局域网）</strong></p>
 <p><strong>（3）100km（城域网）（4）5000km（广域网）</strong></p>
 <p><strong>试计算出当数据率为1Mb/s和10Gb/s时在以上媒体中正在传播的比特数。</strong></p>
-<p>（1）1Mb/s:传播时延=0.1/(2×108)=5×10-10比特数=5×10-10×1×106=5×10-4 1Gb/s: 比特数=5×10-10×1×109=5×10-1</p>
-<p>（2）1Mb/s: 传播时延=100/(2×108)=5×10-7比特数=5×10-7×1×106=5×10-1  1Gb/s: 比特数=5×10-7×1×109=5×102</p>
-<p>（3）1Mb/s: 传播时延=100000/(2×108)=5×10-4比特数=5×10-4×1×106=5×1021Gb/s: 比特数=5×10-4×1×109=5×105</p>
-<p>（4）1Mb/s: 传播时延=5000000/(2×108)=2.5×10-2比特数=2.5×10-2×1×106=5×1041Gb/s: 比特数=2.5×10-2×1×109=5×107</p>
+<p>（1）1Mb/s:<br>    传播时延=$0.1/(2×10^8)=5×10^{-10}$<br>    比特数=$5×10^{-10}×1×10^6=5×10^{-4}$<br>    1Gb/s:<br>    比特数=$5×10^{-10}×1×10^9=5×10^{-1}$</p>
+<p>（2）1Mb/s:<br>    传播时延=$100/(2×10^8)=5×10^{-7}$<br>    比特数=$5×10^{-7}×1×10^6=5×10^{-1}$<br>    1Gb/s:<br>    比特数=$5×10^{-7}×1×10^9=5×10^2$</p>
+<p>（3）1Mb/s:<br>    传播时延=$100000/(2×10^8)=5×10^{-4}$<br>    比特数=$5×10^{-4}×1×10^6=5×10^2$<br>    1Gb/s:<br>    比特数=$5×10^{-4}×1×10^9=5×10^5$</p>
+<p>（4）1Mb/s:<br>    传播时延=$5000000/(2×10^8)=2.5×10^{-2}$<br>    比特数=$2.5×10^{-2}×1×10^6=5×10^4$<br>    1Gb/s:<br>    比特数=$2.5×10^{-2}×1×10^9=5×10^7$</p>
 <p> <strong>1-19</strong>  <strong>长度为100字节的应用层数据交给传输层传送，需加上20字节的TCP首部。再交给网络层传送，需加上20字节的IP首部。最后交给数据链路层的以太网传送，加上首部和尾部工18字节。试求数据的传输效率。数据的传输效率是指发送的应用层数据除以所发送的总数据（即应用数据加上各种首部和尾部的额外开销）。若应用层数据长度为1000字节，数据的传输效率是多少？</strong></p>
 <p>（1）100/（100+20+20+18）=63.3%</p>
 <p>（2）1000/（1000+20+20+18）=94.5%</p>
@@ -392,7 +576,8 @@
 <p>②灵活性好。当某一层发生变化时，只要其接口关系不变，则这层以上或以下的各层均不受影响。</p>
 <p>③结构上可分割开。各层可以采用最合适的技术来实现</p>
 <p>④易于实现和维护。</p>
-<p>⑤能促进标准化工作。与分层体系结构的思想相似的日常生活有邮政系统，物流系统。</p>
+<p>⑤能促进标准化工作。</p>
+<p>与分层体系结构的思想相似的日常生活有邮政系统，物流系统。</p>
 <p><strong>1-21</strong> <strong>协议与服务有何区别？有何关系？</strong></p>
 <p>网络协议：为进行网络中的数据交换而建立的规则、标准或约定。由以下三个要素组成：</p>
 <p>（1）语法：即数据与控制信息的结构或格式。</p>
@@ -414,12 +599,12 @@
 <p><strong>1-25</strong>  <strong>试举出日常生活中有关“透明”这种名词的例子。</strong></p>
 <p>电视，计算机视窗操作系统、工农业产品</p>
 <p><strong>1-26</strong> <strong>试解释以下名词：协议栈、实体、对等层、协议数据单元、服务访问点、客户、服务器、客户-服务器方式。</strong>  </p>
-<p><strong>实体**</strong>(entity)** 表示任何可发送或接收信息的硬件或软件进程。</p>
+<p><strong>实体(entity)</strong> 表示任何可发送或接收信息的硬件或软件进程。</p>
 <p><strong>协议</strong>是控制两个对等实体进行通信的规则的集合。</p>
-<p><strong>客户**</strong>(client)和服务器(server)<strong>都是指通信中所涉及的两个应用进程。</strong></p>
-<p>**客户是服务的请求方，服务器是服务的提供方。</p>
+<p><strong>客户(client)和服务器(server)</strong>都是指通信中所涉及的两个应用进程。</p>
+<p><strong>客户</strong>是服务的请求方，服务器是服务的提供方。</p>
 <p>客户服务器方式<strong>所描述的是进程之间服务和被服务的关系。</strong></p>
-<p>** <strong>协议栈</strong>:指计算机网络体系结构采用分层模型后,每层的主要功能由对等层协议的运行来实现,因而每层可用一些主要协议来表征,几个层次画在一起很像一个栈的结构.对等层:在网络体系结构中,通信双方实现同样功能的层.</p>
+<p><strong>协议栈</strong>指计算机网络体系结构采用分层模型后,每层的主要功能由对等层协议的运行来实现,因而每层可用一些主要协议来表征,几个层次画在一起很像一个栈的结构.对等层:在网络体系结构中,通信双方实现同样功能的层.</p>
 <p>协议数据单元:对等层实体进行信息交换的数据单位.服务访问点:在同一系统中相邻两层的实体进行交互（即交换信息）的地方.服务访问点SAP是一个抽象的概念,它实体上就是一个逻辑接口.</p>
 <p><strong>1-27</strong> <strong>试解释everything over IP 和IP over everything 的含义</strong>。</p>
 <p>TCP/IP协议可以为各式各样的应用提供服务 （所谓的everything over ip）</p>

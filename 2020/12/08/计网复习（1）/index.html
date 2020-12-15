@@ -22,16 +22,16 @@
     var CONFIG = {"hostname":"torato-takara.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="第一章1、什么是计算机网络？&amp;emsp;&amp;emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统 &amp;emsp;&amp;emsp;软件和硬件组成">
+  <meta name="description" content="第一章 概述1、什么是计算机网络？&amp;emsp;&amp;emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统 &amp;emsp;&amp;emsp;软件和硬件组成">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计网复习（1）">
 <meta property="og:url" content="http://torato-takara.github.io/2020/12/08/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="月小白blog">
-<meta property="og:description" content="第一章1、什么是计算机网络？&amp;emsp;&amp;emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统 &amp;emsp;&amp;emsp;软件和硬件组成">
+<meta property="og:description" content="第一章 概述1、什么是计算机网络？&amp;emsp;&amp;emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统 &amp;emsp;&amp;emsp;软件和硬件组成">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/12/08/UIDsyzRlfY3BOmE.png">
 <meta property="article:published_time" content="2020-12-08T06:05:02.000Z">
-<meta property="article:modified_time" content="2020-12-15T05:02:36.868Z">
+<meta property="article:modified_time" content="2020-12-15T07:05:29.801Z">
 <meta property="article:author" content="Torato-Taraka">
 <meta property="article:tag" content="计算机基础">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,11 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -231,7 +235,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-15 13:02:36" itemprop="dateModified" datetime="2020-12-15T13:02:36+08:00">2020-12-15</time>
+                <time title="修改时间：2020-12-15 15:05:29" itemprop="dateModified" datetime="2020-12-15T15:05:29+08:00">2020-12-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -257,14 +261,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>8.2k</span>
+              <span>8.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>8 分钟</span>
             </span>
 
         </div>
@@ -276,10 +280,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h3 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h3><p>&emsp;&emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
+        <h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h1><h3 id="1、什么是计算机网络？"><a href="#1、什么是计算机网络？" class="headerlink" title="1、什么是计算机网络？"></a>1、什么是计算机网络？</h3><p>&emsp;&emsp;利用通信设备和线路将地理位置不同的、功能独立的多个计算机系统连接起来，以功能完善的网络软件实现网络的硬件、软件及资源共享和信息传递的系统</p>
 <p>&emsp;&emsp;软件和硬件组成</p>
 <a id="more"></a>
-
 <h3 id="2、互联网基础结构发展的三个阶段"><a href="#2、互联网基础结构发展的三个阶段" class="headerlink" title="2、互联网基础结构发展的三个阶段"></a>2、互联网基础结构发展的三个阶段</h3><p>&emsp;&emsp;第一阶段：从单个网络 ARPANET 向互联网发展的过程。</p>
 <p>&emsp;&emsp;第二阶段：建成了三级结构的互联网。</p>
 <p>&emsp;&emsp;第三阶段：逐渐形成了多层次 ISP （Internet Service Provider）结构的互联网。</p>
@@ -347,7 +350,7 @@
 <p>&emsp;&emsp;<font color=red>信道利用率</font>指出某信道有百分之几的时间是被利用的（有数据通过）。完全空闲的信道的利用率是零。</p>
 <p>&emsp;&emsp;<font color=red>网络利用率</font>则是全网络的<font color=red>信道利用率的加权平均值</font>。</p>
 <p>&emsp;&emsp;信道利用率并非越高越好。<font color=blue>当某信道的利用率增大时，该信道引起的时延也就迅速增加</font>。</p>
-<p>&emsp;&emsp;$D = \dfrac{D_0}{1-U}$，其中，D表示当前时延，D<del>0</del>表示空闲时的时延，U是网络利用率，在0到1之间。</p>
+<p>&emsp;&emsp;$D = \dfrac{D_0}{1-U}$，其中，D表示当前时延，$D_0$表示空闲时的时延，U是网络利用率，在0到1之间。</p>
 <h5 id="非性能指标"><a href="#非性能指标" class="headerlink" title="非性能指标"></a>非性能指标</h5><p>&emsp;&emsp;费用</p>
 <p>&emsp;&emsp;质量</p>
 <p>&emsp;&emsp;标准化</p>
@@ -357,63 +360,64 @@
 <h3 id="8、网络协议的三个组成要素"><a href="#8、网络协议的三个组成要素" class="headerlink" title="8、网络协议的三个组成要素"></a>8、网络协议的三个组成要素</h3><p>&emsp;&emsp;语法</p>
 <p>&emsp;&emsp;语义</p>
 <p>&emsp;&emsp;同步</p>
-<h3 id="9、协议体系结构"><a href="#9、协议体系结构" class="headerlink" title="9、协议体系结构"></a>9、协议体系结构</h3><table>
+<h3 id="9、协议体系结构"><a href="#9、协议体系结构" class="headerlink" title="9、协议体系结构"></a>9、协议体系结构</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">OSI体系结构</th>
-<th align="center">TCP/IP体系结构</th>
-<th align="center">五层协议体系结构</th>
+<th style="text-align:center">OSI体系结构</th>
+<th style="text-align:center">TCP/IP体系结构</th>
+<th style="text-align:center">五层协议体系结构</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">应用层</td>
-<td align="center"></td>
-<td align="center"></td>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">表示层</td>
-<td align="center">应用层</td>
-<td align="center">应用层</td>
+<td style="text-align:center">表示层</td>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">应用层</td>
 </tr>
 <tr>
-<td align="center">会话层</td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center">会话层</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">运输层</td>
-<td align="center">运输层（TCP或UDP）</td>
-<td align="center">运输层</td>
+<td style="text-align:center">运输层</td>
+<td style="text-align:center">运输层（TCP或UDP）</td>
+<td style="text-align:center">运输层</td>
 </tr>
 <tr>
-<td align="center">网络层</td>
-<td align="center">网际层IP</td>
-<td align="center">网络层</td>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">网际层IP</td>
+<td style="text-align:center">网络层</td>
 </tr>
 <tr>
-<td align="center">数据链路层</td>
-<td align="center">网络接口层</td>
-<td align="center">数据链路层</td>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">网络接口层</td>
+<td style="text-align:center">数据链路层</td>
 </tr>
 <tr>
-<td align="center">物理层</td>
-<td align="center"></td>
-<td align="center">物理层</td>
+<td style="text-align:center">物理层</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">物理层</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="10、课后习题"><a href="#10、课后习题" class="headerlink" title="10、课后习题"></a>10、课后习题</h3><p><strong>1-01</strong> <strong>计算机网络向用户可以提供那些服务？</strong></p>
 <p>连通性和共享</p>
-<p><strong>1-02</strong> <strong>简述分组交换的要点。</strong></p>
-<ul>
+<h5 id="1-02-简述分组交换的要点。"><a href="#1-02-简述分组交换的要点。" class="headerlink" title="1-02 简述分组交换的要点。"></a><strong>1-02</strong> <strong>简述分组交换的要点。</strong></h5><ul>
 <li><p>报文分组，加首部</p>
 </li>
 <li><p>经路由器储存转发</p>
 </li>
-<li><p>在目的地合并</p>
-</li>
+<li>在目的地合并</li>
 </ul>
-<p><strong>1-03</strong> <strong>试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。</strong></p>
-<ul>
+<h5 id="1-03-试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。"><a href="#1-03-试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。" class="headerlink" title="1-03 试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。"></a><strong>1-03</strong> <strong>试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。</strong></h5><ul>
 <li>电路交换：端对端通信质量因约定了通信资源获得可靠保障，对连续传送大量数据效率高。</li>
 <li>报文交换：无须预约传输带宽，动态逐段利用传输带宽对突发式数据通信效率高，通信迅速。</li>
 <li>分组交换：具有报文交换之高效、迅速的要点，且各分组小，路由灵活，网络生存性能好。</li>
@@ -454,14 +458,13 @@
 <li><p>本地接入网：主要支持用户的访问本地，实现散户接入，速率低。</p>
 </li>
 </ul>
-<p><strong>1-10</strong> <strong>试在下列条件下比较电路交换和分组交换。</strong></p>
-<p><strong>要传送的报文共x（bit）。从源点到终点共经过k段链路，每段链路的传播时延为d（s），数据率为b(b/s)。在电路交换时电路的建立时间为s(s)。在分组交换时分组长度为p(bit)，且各结点的排队等待时间可忽略不计。</strong></p>
+<h5 id="1-10-试在下列条件下比较电路交换和分组交换。"><a href="#1-10-试在下列条件下比较电路交换和分组交换。" class="headerlink" title="1-10 试在下列条件下比较电路交换和分组交换。"></a><strong>1-10</strong> <strong>试在下列条件下比较电路交换和分组交换。</strong></h5><p><strong>要传送的报文共x（bit）。从源点到终点共经过k段链路，每段链路的传播时延为d（s），数据率为b(b/s)。在电路交换时电路的建立时间为s(s)。在分组交换时分组长度为p(bit)，且各结点的排队等待时间可忽略不计。</strong></p>
 <p><strong>问在怎样的条件下，分组交换的时延比电路交换的要小？</strong>（提示：画一下草图观察k段链路共有几个结点。）</p>
 <p>线路交换时延：$kd + \dfrac{x}{b} + s$</p>
-<p>分组交换时延：$kd + \lceil\dfrac{x}{p}\rceil*\dfrac{p}{b} + (k-1)*\dfrac{p}{b}$，其中$(k-1)*\dfrac{p}{b}$表示K段传输中，有$(k-1)$次的储存转发延迟，当$s&gt;(k-1)\dfrac{p}{b}$时</p>
+<p>分组交换时延：$kd + \lceil\dfrac{x}{p}\rceil\dfrac{p}{b} + (k-1)\dfrac{p}{b}$，其中$(k-1)\dfrac{p}{b}$表示K段传输中，有$(k-1)$次的储存转发延迟，当$s&gt;(k-1)\dfrac{p}{b}$时</p>
 <p>电路交换的时延比分组交换的时延大，当x&gt;&gt;p，相反。</p>
 <p><strong>1-11</strong> <strong>在上题的分组交换网中，设报文长度和分组长度分别为x和(p+h)(bit),其中p为分组的数据部分的长度，而h为每个分组所带的控制信息固定长度，与p的大小无关。通信的两端共经过k段链路。链路的数据率为b(b/s)，但传播时延和结点的排队时间均可忽略不计。</strong> <strong>若打算使总的时延为最小，问分组的数据部分长度 p 应取为多大？</strong>（提示：参考图1-12的分组交换部分，观察总的时延是由哪几部分组成。）</p>
-<p>总时延D表达式，分组交换时延为：$D = kd + \dfrac{x}{p}*\dfrac{p+h}{b} + (k-1)*\dfrac{p+h}{b}$</p>
+<p>总时延D表达式，分组交换时延为：$D = kd + \dfrac{x}{p}\dfrac{p+h}{b} + (k-1)\dfrac{p+h}{b}$</p>
 <p>D对p求导后，令其值等于0，求得$p=\sqrt{\dfrac{xh}{k-1}}$</p>
 <p><strong>1-12</strong> <strong>因特网的两大组成部分（边缘部分与核心部分）的特点是什么？它们的工作方式各有什么特点？</strong></p>
 <ul>
@@ -474,29 +477,27 @@
 <p>前者严格区分服务和被服务者，后者无此区别。后者实际上是前者的双向应用。</p>
 <p><strong>1-14</strong> <strong>计算机网络有哪些常用的性能指标？</strong></p>
 <p>速率，带宽，吞吐量，时延，时延带宽积，往返时间RTT，利用率</p>
-<p><strong>1-15</strong> <strong>假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？</strong></p>
-<p>设网络利用率为U，网络时延为D，网络时延最小值为D<del>0</del>，U=90%</p>
-<p>$D=\dfrac{D_0}{1-U}–&gt;\dfrac{D}{D_0} = 10$</p>
+<h5 id="1-15-假定网络利用率达到了90-。试估计一下现在的网络时延是它的最小值的多少倍？"><a href="#1-15-假定网络利用率达到了90-。试估计一下现在的网络时延是它的最小值的多少倍？" class="headerlink" title="1-15 假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？"></a><strong>1-15</strong> <strong>假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？</strong></h5><p>设网络利用率为U，网络时延为D，网络时延最小值为$D_0$，U=90%</p>
+<p>$D=\dfrac{D_0}{1-U}—&gt;\dfrac{D}{D_0} = 10$</p>
 <p>现在的网络时延是最小值的10倍</p>
 <p><strong>1-16</strong> <strong>计算机通信网有哪些非性能特征？非性能特征与性能特征有什么区别？</strong></p>
 <p>非性能特征：宏观整体评价网络的外在表现。性能指标：具体定量描述网络的技术性能。</p>
-<p><strong>1-17</strong> <strong>收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×108m/s。试计算以下两种情况的发送时延和传播时延：</strong> </p>
-<p><strong>（1） 数据长度为107bit,数据发送速率为100kb/s。**</strong></p>
-<p><strong>（2） 数据长度为103bit,数据发送速率为1Gb/s。</strong></p>
+<h5 id="1-17-收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10-8-m-s。试计算以下两种情况的发送时延和传播时延："><a href="#1-17-收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10-8-m-s。试计算以下两种情况的发送时延和传播时延：" class="headerlink" title="1-17 收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10^8^m/s。试计算以下两种情况的发送时延和传播时延："></a><strong>1-17</strong> <strong>收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10^8^m/s。试计算以下两种情况的发送时延和传播时延：</strong></h5><p><strong>（1） 数据长度为10^7^bit,数据发送速率为100kb/s。**</strong></p>
+<p><strong>（2） 数据长度为10^3^bit,数据发送速率为1Gb/s。</strong></p>
 <p><strong>从上面的计算中可以得到什么样的结论？</strong></p>
-<p>（1）发送时延：ts=107/105=100s</p>
-<p>​          传播时延tp=106/(2×108)=0.005s</p>
-<p>（2）发送时延：ts =103/109=1µs</p>
-<p>​          传播时延：tp=106/(2×108)=0.005s</p>
+<p>（1）发送时延：$ts=10^7/10^5=100s$</p>
+<p>​          传播时延：$tp=10^6/(2×10^8)=0.005s$</p>
+<p>（2）发送时延：$ts =10^3/10^9=1µs$</p>
+<p>​          传播时延：$tp=10^6/(2×10^8)=0.005s$</p>
 <p>结论：若数据长度大而发送速率低，则在总的时延中，发送时延往往大于传播时延。但若数据长度短而发送速率高，则传播时延就可能是总时延中的主要成分。</p>
-<p><strong>1-18</strong> <strong>假设信号在媒体上的传播速度为2×108m/s.媒体长度L分别为：</strong></p>
+<p><strong>1-18</strong> <strong>假设信号在媒体上的传播速度为2×10^8m/s.媒体长度L分别为：</strong></p>
 <p><strong>（1）10cm（网络接口卡）（2）100m（局域网）</strong></p>
 <p><strong>（3）100km（城域网）（4）5000km（广域网）</strong></p>
 <p><strong>试计算出当数据率为1Mb/s和10Gb/s时在以上媒体中正在传播的比特数。</strong></p>
-<p>（1）1Mb/s:传播时延=0.1/(2×108)=5×10-10比特数=5×10-10×1×106=5×10-4 1Gb/s: 比特数=5×10-10×1×109=5×10-1</p>
-<p>（2）1Mb/s: 传播时延=100/(2×108)=5×10-7比特数=5×10-7×1×106=5×10-1  1Gb/s: 比特数=5×10-7×1×109=5×102</p>
-<p>（3）1Mb/s: 传播时延=100000/(2×108)=5×10-4比特数=5×10-4×1×106=5×1021Gb/s: 比特数=5×10-4×1×109=5×105</p>
-<p>（4）1Mb/s: 传播时延=5000000/(2×108)=2.5×10-2比特数=2.5×10-2×1×106=5×1041Gb/s: 比特数=2.5×10-2×1×109=5×107</p>
+<p>（1）1Mb/s:<br>    传播时延=$0.1/(2×10^8)=5×10^{-10}$<br>    比特数=$5×10^{-10}×1×10^6=5×10^{-4}$<br>    1Gb/s:<br>    比特数=$5×10^{-10}×1×10^9=5×10^{-1}$</p>
+<p>（2）1Mb/s:<br>    传播时延=$100/(2×10^8)=5×10^{-7}$<br>    比特数=$5×10^{-7}×1×10^6=5×10^{-1}$<br>    1Gb/s:<br>    比特数=$5×10^{-7}×1×10^9=5×10^2$</p>
+<p>（3）1Mb/s:<br>    传播时延=$100000/(2×10^8)=5×10^{-4}$<br>    比特数=$5×10^{-4}×1×10^6=5×10^2$<br>    1Gb/s:<br>    比特数=$5×10^{-4}×1×10^9=5×10^5$</p>
+<p>（4）1Mb/s:<br>    传播时延=$5000000/(2×10^8)=2.5×10^{-2}$<br>    比特数=$2.5×10^{-2}×1×10^6=5×10^4$<br>    1Gb/s:<br>    比特数=$2.5×10^{-2}×1×10^9=5×10^7$</p>
 <p> <strong>1-19</strong>  <strong>长度为100字节的应用层数据交给传输层传送，需加上20字节的TCP首部。再交给网络层传送，需加上20字节的IP首部。最后交给数据链路层的以太网传送，加上首部和尾部工18字节。试求数据的传输效率。数据的传输效率是指发送的应用层数据除以所发送的总数据（即应用数据加上各种首部和尾部的额外开销）。若应用层数据长度为1000字节，数据的传输效率是多少？</strong></p>
 <p>（1）100/（100+20+20+18）=63.3%</p>
 <p>（2）1000/（1000+20+20+18）=94.5%</p>
@@ -506,7 +507,8 @@
 <p>②灵活性好。当某一层发生变化时，只要其接口关系不变，则这层以上或以下的各层均不受影响。</p>
 <p>③结构上可分割开。各层可以采用最合适的技术来实现</p>
 <p>④易于实现和维护。</p>
-<p>⑤能促进标准化工作。与分层体系结构的思想相似的日常生活有邮政系统，物流系统。</p>
+<p>⑤能促进标准化工作。</p>
+<p>与分层体系结构的思想相似的日常生活有邮政系统，物流系统。</p>
 <p><strong>1-21</strong> <strong>协议与服务有何区别？有何关系？</strong></p>
 <p>网络协议：为进行网络中的数据交换而建立的规则、标准或约定。由以下三个要素组成：</p>
 <p>（1）语法：即数据与控制信息的结构或格式。</p>
@@ -528,12 +530,12 @@
 <p><strong>1-25</strong>  <strong>试举出日常生活中有关“透明”这种名词的例子。</strong></p>
 <p>电视，计算机视窗操作系统、工农业产品</p>
 <p><strong>1-26</strong> <strong>试解释以下名词：协议栈、实体、对等层、协议数据单元、服务访问点、客户、服务器、客户-服务器方式。</strong>  </p>
-<p><strong>实体**</strong>(entity)** 表示任何可发送或接收信息的硬件或软件进程。</p>
+<p><strong>实体(entity)</strong> 表示任何可发送或接收信息的硬件或软件进程。</p>
 <p><strong>协议</strong>是控制两个对等实体进行通信的规则的集合。</p>
-<p><strong>客户**</strong>(client)和服务器(server)<strong>都是指通信中所涉及的两个应用进程。</strong></p>
-<p>**客户是服务的请求方，服务器是服务的提供方。</p>
+<p><strong>客户(client)和服务器(server)</strong>都是指通信中所涉及的两个应用进程。</p>
+<p><strong>客户</strong>是服务的请求方，服务器是服务的提供方。</p>
 <p>客户服务器方式<strong>所描述的是进程之间服务和被服务的关系。</strong></p>
-<p>** <strong>协议栈</strong>:指计算机网络体系结构采用分层模型后,每层的主要功能由对等层协议的运行来实现,因而每层可用一些主要协议来表征,几个层次画在一起很像一个栈的结构.对等层:在网络体系结构中,通信双方实现同样功能的层.</p>
+<p><strong>协议栈</strong>指计算机网络体系结构采用分层模型后,每层的主要功能由对等层协议的运行来实现,因而每层可用一些主要协议来表征,几个层次画在一起很像一个栈的结构.对等层:在网络体系结构中,通信双方实现同样功能的层.</p>
 <p>协议数据单元:对等层实体进行信息交换的数据单位.服务访问点:在同一系统中相邻两层的实体进行交互（即交换信息）的地方.服务访问点SAP是一个抽象的概念,它实体上就是一个逻辑接口.</p>
 <p><strong>1-27</strong> <strong>试解释everything over IP 和IP over everything 的含义</strong>。</p>
 <p>TCP/IP协议可以为各式各样的应用提供服务 （所谓的everything over ip）</p>
@@ -549,8 +551,34 @@
   <ul class="popular-posts">
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="\2020\12\15\计网复习（2）\" rel="bookmark">计网复习（2）</a></div>
-        <div class="popular-posts-excerpt"><p><h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h3 id="1、物理层"><a href="#1、物理层" class="headerlink" title="1、物理层"></a>1、物理层</h3><p>物理层是网络的基础，物理层介质包含有线、无线、光纤等，决定了网络的传输速度</p>
+        <div class="popular-posts-excerpt"><p><h1 id="第二章-物理层"><a href="#第二章-物理层" class="headerlink" title="第二章 物理层"></a>第二章 物理层</h1><h3 id="1、物理层"><a href="#1、物理层" class="headerlink" title="1、物理层"></a>1、物理层</h3><p>物理层是网络的基础，物理层介质包含有线、无线、光纤等，决定了网络的传输速度</p>
 <p>物理层的关键是如何使用信号（电磁波）来发送比特，称为<font color=red>调制/解调</font></p></p></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\2020\12\15\计网复习（3）\" rel="bookmark">计网复习（3）</a></div>
+        <div class="popular-posts-excerpt"><p><h1 id="第三章-数据链路层"><a href="#第三章-数据链路层" class="headerlink" title="第三章 数据链路层"></a>第三章 数据链路层</h1><h3 id="1、数据链路层"><a href="#1、数据链路层" class="headerlink" title="1、数据链路层"></a>1、数据链路层</h3><ul>
+<li><p>针对直接相连的两个节点之间的通信</p>
+<ul>
+<li>点对点信道</li>
+<li>这种信道使用一对一的点对点通信方式<ul>
+<li>链路(link)是一条<font color=orange>无源的点到点的物理线路段</font>，中间没有任何其他的交换结点<ul>
+<li>一条链路只是一条通路的一个组成部分</li>
+</ul>
+</li>
+<li>数据链路(data link) 除了<font color=orange>物理线路</font>外，还必须有<font color=orange>通信协议</font>来控制这些数据的传输。若把实现这些协议的硬件和软件加到链路上，就构成了数据链路<ul>
+<li>现在最常用的方法是使用<font color=orange>适配器（即网卡）</font>来实现这些协议的硬件和软件</li>
+<li><font color=blue>一般的适配器都包括了数据链路层和物理层这两层的功能</font></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>广播信道<ul>
+<li>这种信道使用一对多的广播通信方式，因此过程比较复杂</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></p></div>
     </li>
   </ul>
 
@@ -663,7 +691,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%EF%BC%9F"><span class="nav-text">1、什么是计算机网络？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BA%92%E8%81%94%E7%BD%91%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E5%8F%91%E5%B1%95%E7%9A%84%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-text">2、互联网基础结构发展的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%88%90%E4%B8%BA%E4%BA%92%E8%81%94%E7%BD%91%E6%AD%A3%E5%BC%8F%E6%A0%87%E5%87%86%E8%A6%81%E7%BB%8F%E8%BF%87%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-text">3、成为互联网正式标准要经过三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-text">4、互联网的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E3%80%81%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E3%80%81%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2"><span class="nav-text">5、电路交换、分组交换、报文交换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2"><span class="nav-text">电路交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2"><span class="nav-text">分组交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2"><span class="nav-text">报文交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%9B%BE%E7%A4%BA"><span class="nav-text">三种交换的图示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E7%B1%BB%E5%88%AB"><span class="nav-text">6、计算机网络的类别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD"><span class="nav-text">7、计算机网络的性能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-text">性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%80%9F%E7%8E%87"><span class="nav-text">速率</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%B8%A6%E5%AE%BD"><span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E7%8E%87"><span class="nav-text">吞吐率</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6"><span class="nav-text">时延</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF"><span class="nav-text">时延带宽积</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4RTT"><span class="nav-text">往返时间RTT</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-text">利用率</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%9E%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-text">非性能指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="nav-text">8、网络协议的三个组成要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9%E3%80%81%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-text">9、协议体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10%E3%80%81%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="nav-text">10、课后习题</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%A6%82%E8%BF%B0"><span class="nav-text">第一章 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%EF%BC%9F"><span class="nav-text">1、什么是计算机网络？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BA%92%E8%81%94%E7%BD%91%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84%E5%8F%91%E5%B1%95%E7%9A%84%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-text">2、互联网基础结构发展的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%88%90%E4%B8%BA%E4%BA%92%E8%81%94%E7%BD%91%E6%AD%A3%E5%BC%8F%E6%A0%87%E5%87%86%E8%A6%81%E7%BB%8F%E8%BF%87%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="nav-text">3、成为互联网正式标准要经过三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-text">4、互联网的组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E3%80%81%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E3%80%81%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2"><span class="nav-text">5、电路交换、分组交换、报文交换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2"><span class="nav-text">电路交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2"><span class="nav-text">分组交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2"><span class="nav-text">报文交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%9B%BE%E7%A4%BA"><span class="nav-text">三种交换的图示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E7%B1%BB%E5%88%AB"><span class="nav-text">6、计算机网络的类别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD"><span class="nav-text">7、计算机网络的性能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-text">性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%80%9F%E7%8E%87"><span class="nav-text">速率</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%B8%A6%E5%AE%BD"><span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E7%8E%87"><span class="nav-text">吞吐率</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6"><span class="nav-text">时延</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF"><span class="nav-text">时延带宽积</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4RTT"><span class="nav-text">往返时间RTT</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-text">利用率</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%9E%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-text">非性能指标</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="nav-text">8、网络协议的三个组成要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9%E3%80%81%E5%8D%8F%E8%AE%AE%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-text">9、协议体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10%E3%80%81%E8%AF%BE%E5%90%8E%E4%B9%A0%E9%A2%98"><span class="nav-text">10、课后习题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-02-%E7%AE%80%E8%BF%B0%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E7%9A%84%E8%A6%81%E7%82%B9%E3%80%82"><span class="nav-text">1-02 简述分组交换的要点。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-03-%E8%AF%95%E4%BB%8E%E5%A4%9A%E4%B8%AA%E6%96%B9%E9%9D%A2%E6%AF%94%E8%BE%83%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E3%80%81%E6%8A%A5%E6%96%87%E4%BA%A4%E6%8D%A2%E5%92%8C%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BC%98%E7%BC%BA%E7%82%B9%E3%80%82"><span class="nav-text">1-03 试从多个方面比较电路交换、报文交换和分组交换的主要优缺点。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-10-%E8%AF%95%E5%9C%A8%E4%B8%8B%E5%88%97%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%AF%94%E8%BE%83%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E5%92%8C%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2%E3%80%82"><span class="nav-text">1-10 试在下列条件下比较电路交换和分组交换。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-15-%E5%81%87%E5%AE%9A%E7%BD%91%E7%BB%9C%E5%88%A9%E7%94%A8%E7%8E%87%E8%BE%BE%E5%88%B0%E4%BA%8690-%E3%80%82%E8%AF%95%E4%BC%B0%E8%AE%A1%E4%B8%80%E4%B8%8B%E7%8E%B0%E5%9C%A8%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%B6%E5%BB%B6%E6%98%AF%E5%AE%83%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC%E7%9A%84%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%9F"><span class="nav-text">1-15 假定网络利用率达到了90%。试估计一下现在的网络时延是它的最小值的多少倍？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-17-%E6%94%B6%E5%8F%91%E4%B8%A4%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%A0%E8%BE%93%E8%B7%9D%E7%A6%BB%E4%B8%BA1000km%EF%BC%8C%E4%BF%A1%E5%8F%B7%E5%9C%A8%E5%AA%92%E4%BD%93%E4%B8%8A%E7%9A%84%E4%BC%A0%E6%92%AD%E9%80%9F%E7%8E%87%E4%B8%BA2%C3%9710-8-m-s%E3%80%82%E8%AF%95%E8%AE%A1%E7%AE%97%E4%BB%A5%E4%B8%8B%E4%B8%A4%E7%A7%8D%E6%83%85%E5%86%B5%E7%9A%84%E5%8F%91%E9%80%81%E6%97%B6%E5%BB%B6%E5%92%8C%E4%BC%A0%E6%92%AD%E6%97%B6%E5%BB%B6%EF%BC%9A"><span class="nav-text">1-17 收发两端之间的传输距离为1000km，信号在媒体上的传播速率为2×10^8^m&#x2F;s。试计算以下两种情况的发送时延和传播时延：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -679,7 +707,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -737,12 +765,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">16k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">14 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -805,6 +833,63 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 <!-- calendar widget -->
