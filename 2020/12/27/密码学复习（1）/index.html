@@ -22,20 +22,31 @@
     var CONFIG = {"hostname":"torato-takara.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="第06讲 恶意代码检测 恶意代码检测对象与策略 特征值检测技术 校验和检测技术 启发式扫描技术 其它检测技术 第三方在线检测服务  无考点">
+  <meta name="description" content="第一讲 信息安全概论一、二十一世纪是信息的时代 二、信息安全形势严峻">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软安复习（6）">
-<meta property="og:url" content="http://torato-takara.github.io/2020/12/26/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%886%EF%BC%89/index.html">
+<meta property="og:title" content="密码学复习（1）">
+<meta property="og:url" content="http://torato-takara.github.io/2020/12/27/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="月小白blog">
-<meta property="og:description" content="第06讲 恶意代码检测 恶意代码检测对象与策略 特征值检测技术 校验和检测技术 启发式扫描技术 其它检测技术 第三方在线检测服务  无考点">
+<meta property="og:description" content="第一讲 信息安全概论一、二十一世纪是信息的时代 二、信息安全形势严峻">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-12-26T01:28:04.000Z">
-<meta property="article:modified_time" content="2020-12-27T03:37:35.562Z">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/iZJyt4zPHj8VOgS.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/bc4Rk8J3IqEGexK.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/igCAn1W6d5OUwX4.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/GNL2ry4HgSf6PUZ.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/gjVIFmOEP9RGb4X.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/5R3SwmqipPXabg1.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/nmMBqTfhjSsrdeK.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/BDbMCz5ioInAqUX.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/GoIFwPhWL8mV4tD.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/27/93tn1kwgdUMuIiS.png">
+<meta property="article:published_time" content="2020-12-27T01:17:04.000Z">
+<meta property="article:modified_time" content="2020-12-27T11:06:52.709Z">
 <meta property="article:author" content="Torato-Taraka">
-<meta property="article:tag" content="软件安全基础课">
+<meta property="article:tag" content="信息安全基础课">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/12/27/iZJyt4zPHj8VOgS.png">
 
-<link rel="canonical" href="http://torato-takara.github.io/2020/12/26/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%886%EF%BC%89/">
+<link rel="canonical" href="http://torato-takara.github.io/2020/12/27/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/">
 
 
 <script id="page-configurations">
@@ -48,7 +59,7 @@
   };
 </script>
 
-  <title>软安复习（6） | 月小白blog</title>
+  <title>密码学复习（1） | 月小白blog</title>
   
 
 
@@ -203,7 +214,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://torato-takara.github.io/2020/12/26/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%886%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="http://torato-takara.github.io/2020/12/27/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/11.jpg">
@@ -216,7 +227,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          软安复习（6）
+          密码学复习（1）
         </h1>
 
         <div class="post-meta">
@@ -225,16 +236,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-12-26 09:28:04" itemprop="dateCreated datePublished" datetime="2020-12-26T09:28:04+08:00">2020-12-26</time>
+              <time title="创建时间：2020-12-27 09:17:04 / 修改时间：19:06:52" itemprop="dateCreated datePublished" datetime="2020-12-27T09:17:04+08:00">2020-12-27</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-27 11:37:35" itemprop="dateModified" datetime="2020-12-27T11:37:35+08:00">2020-12-27</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -249,7 +254,7 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E4%B8%89/%E8%BD%AF%E5%AE%89/" itemprop="url" rel="index"><span itemprop="name">软安</span></a>
+                  <a href="/categories/%E5%A4%A7%E5%AD%A6/%E5%A4%A7%E4%B8%89/%E5%AF%86%E7%A0%81%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">密码学</span></a>
                 </span>
             </span>
 
@@ -259,7 +264,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>60</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -278,15 +283,143 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="第06讲-恶意代码检测"><a href="#第06讲-恶意代码检测" class="headerlink" title="第06讲 恶意代码检测"></a>第06讲 恶意代码检测</h1><ul>
-<li>恶意代码检测对象与策略</li>
-<li>特征值检测技术</li>
-<li>校验和检测技术</li>
-<li>启发式扫描技术</li>
-<li>其它检测技术</li>
-<li>第三方在线检测服务</li>
+        <h1 id="第一讲-信息安全概论"><a href="#第一讲-信息安全概论" class="headerlink" title="第一讲 信息安全概论"></a>第一讲 信息安全概论</h1><p>一、二十一世纪是信息的时代</p>
+<p>二、信息安全形势严峻</p>
+<p>三、网络空间安全学科概论</p>
+<p>四、 武汉大学的 网络空间</p>
+<h1 id="第二讲-密码学的基本概念"><a href="#第二讲-密码学的基本概念" class="headerlink" title="第二讲 密码学的基本概念"></a>第二讲 密码学的基本概念</h1><p>一、我国的密码政策</p>
+<p>二、密码学的基本概念</p>
+<ul>
+<li><p>密码的基本思想</p>
+<ul>
+<li>对数据进行伪装以隐蔽信息，使未授权者不能理解它的真实含义。</li>
 </ul>
-<p>无考点</p>
+</li>
+<li><p>密码体制(Cryptosystem)</p>
+<p><img src="https://i.loli.net/2020/12/27/iZJyt4zPHj8VOgS.png" alt="k-1.png"></p>
+<p><img src="https://i.loli.net/2020/12/27/bc4Rk8J3IqEGexK.png" alt="k-2.png"></p>
+</li>
+</ul>
+<h3 id="密码体制的分类"><a href="#密码体制的分类" class="headerlink" title="密码体制的分类"></a>密码体制的分类</h3><ul>
+<li>从加密钥与解密钥是否相等划分<ul>
+<li>传统密码/ 对称密码/ 单密钥密码</li>
+<li>公开密钥密码/ 非对称密码/ 双密钥密码</li>
+</ul>
+</li>
+<li><p>从密钥的使用方式划分</p>
+<ul>
+<li><p>序列密码</p>
+<ul>
+<li>明文、密文、密钥以位（字符）为单位加解密</li>
+</ul>
+</li>
+<li><p>分组密码</p>
+<ul>
+<li>明文、密文、密钥以块（分组）为单位加解密</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>从密码算法是否变化划分 </p>
+<ul>
+<li>固定算法密码<ul>
+<li>密码在工作过程中算法固定不变，密钥可变</li>
+<li>迄今为止的绝大多数密码都是固定算法密码</li>
+</ul>
+</li>
+<li>演化密码<ul>
+<li>借鉴生物进化，将密码学与演化计算结合</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>从是否基于数学划分</p>
+<ul>
+<li>基于数学的密码</li>
+<li>基于非数学的密码<ul>
+<li>基于物理学的密码： 发 量子密码（量子密钥分发 QKD） </li>
+<li>基于生物学的密码： DNA 密码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="密码学的组成"><a href="#密码学的组成" class="headerlink" title="密码学的组成"></a>密码学的组成</h3><h5 id="密码编制学"><a href="#密码编制学" class="headerlink" title="密码编制学"></a>密码编制学</h5><h5 id="密码分析学"><a href="#密码分析学" class="headerlink" title="密码分析学"></a>密码分析学</h5><ul>
+<li>穷举攻击</li>
+<li>基于数学的分析<ul>
+<li>统计分析</li>
+</ul>
+</li>
+<li>基于非数学的分析<ul>
+<li>非数学的密码分析是指，密码分析者获取并分析密码芯片的物理参数（如功率、电流、声音、执行时间，等）来破译密码。</li>
+</ul>
+</li>
+<li>根据占有的数据资源分类<ul>
+<li>仅知密文攻击（ Ciphertext- - only attack）</li>
+<li>已知明文攻击（ Known- - plaintext attack）</li>
+<li>选择明文攻击（ Chosen- - plaintext attack）</li>
+<li>选择密文攻击（ Chosen- -t Ciphertext  attack）</li>
+</ul>
+</li>
+</ul>
+<h3 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h3><h5 id="置换密码"><a href="#置换密码" class="headerlink" title="置换密码"></a>置换密码</h5><ul>
+<li>把明文中的字母重新排列，字母本身不变，但其位置改变了，这样编成的密码称为置换密码。</li>
+<li>把明文按某一顺序排成一个矩阵，  然后按另一顺序选出矩阵中的字母以形成密文，最后截成固定长度的字母组作为密文。</li>
+</ul>
+<h5 id="代替密码"><a href="#代替密码" class="headerlink" title="代替密码"></a>代替密码</h5><ul>
+<li><p>单表代替密码</p>
+<ul>
+<li><p>只使用一个密文字母表，并且用密文字母表中的一个字母来代替明文字母表中的一个字母。</p>
+</li>
+<li><p>加法密码</p>
+<ul>
+<li><p>加法密码是用明文字母在字母表中后面第 k  个字母来代替。</p>
+</li>
+<li><p><font color = red>k  = 3  </font>时是著名的凯撒密码</p>
+</li>
+</ul>
+</li>
+<li><p>乘法密码</p>
+</li>
+<li><p>密钥词组代替密码</p>
+</li>
+</ul>
+</li>
+<li><p>多表代替密码</p>
+<ul>
+<li>Vigenere 密码<ul>
+<li>Vigenre 在 密码的代替规则是用明文字母在 Vigenre方阵中的列和密钥字母在 Vigenre 方阵中的行的交点处的字母来代替该明文字母。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>多名代替密码</p>
+</li>
+</ul>
+<h1 id="第三讲-数据加密标准-DES"><a href="#第三讲-数据加密标准-DES" class="headerlink" title="第三讲 数据加密标准(DES)"></a>第三讲 数据加密标准(DES)</h1><p><img src="https://i.loli.net/2020/12/27/igCAn1W6d5OUwX4.png" alt="k-3.png"></p>
+<h5 id="分组密码"><a href="#分组密码" class="headerlink" title="分组密码"></a>分组密码</h5><p>分组密码的加密方式是：首先将明文序列以固定长度进行分组，每组明文用相同的密钥和算法进行变换，得到一组密文。分组密码是以块为单位，在密钥的控制下进行一系列线性和非线性变换而得到密文的。</p>
+<p><img src="https://i.loli.net/2020/12/27/GNL2ry4HgSf6PUZ.png" alt="k-4.png"></p>
+<h6 id="分组密码的特点"><a href="#分组密码的特点" class="headerlink" title="分组密码的特点"></a>分组密码的特点</h6><ul>
+<li>良好的扩散性</li>
+<li>对插入信息的敏感性，较强的适应性</li>
+<li>加/解密速度慢</li>
+<li>差错的扩散和传播</li>
+</ul>
+<h5 id="对称分组密码-与-序列密码"><a href="#对称分组密码-与-序列密码" class="headerlink" title="对称分组密码 与 序列密码"></a>对称分组密码 与 序列密码</h5><p><img src="https://i.loli.net/2020/12/27/gjVIFmOEP9RGb4X.png" alt="k-5.png"></p>
+<h5 id="Feistel网络结构"><a href="#Feistel网络结构" class="headerlink" title="Feistel网络结构"></a>Feistel网络结构</h5><p><img src="https://i.loli.net/2020/12/27/5R3SwmqipPXabg1.png" alt="k-6.png"></p>
+<p><img src="https://i.loli.net/2020/12/27/nmMBqTfhjSsrdeK.png" alt="k-7.png"></p>
+<h5 id="DES密码的整体特点"><a href="#DES密码的整体特点" class="headerlink" title="DES密码的整体特点"></a>DES密码的整体特点</h5><ul>
+<li>分组密码</li>
+<li>面向二进制数据的密码算法</li>
+<li>对合运算</li>
+<li>综合运用了置换、代替、代数等基本密码技术</li>
+<li>基本结构属于Feistel 结构</li>
+</ul>
+<h5 id="DES加密过程"><a href="#DES加密过程" class="headerlink" title="DES加密过程"></a>DES加密过程</h5><p><img src="https://i.loli.net/2020/12/27/BDbMCz5ioInAqUX.png" alt="k-8.png"></p>
+<h5 id="子密钥生成"><a href="#子密钥生成" class="headerlink" title="子密钥生成"></a>子密钥生成</h5><p><img src="https://i.loli.net/2020/12/27/GoIFwPhWL8mV4tD.png" alt="k-9.png"></p>
+<h5 id="加密函数"><a href="#加密函数" class="headerlink" title="加密函数"></a>加密函数</h5><p><img src="https://i.loli.net/2020/12/27/93tn1kwgdUMuIiS.png" alt="k-10.png"></p>
 
     </div>
 
@@ -294,24 +427,6 @@
     
     
       
-  <div class="popular-posts-header">相关文章推荐</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\12\25\软安复习（1）\" rel="bookmark">软安复习（1）</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\12\26\软安复习（10）\" rel="bookmark">软安复习（10）</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\12\25\软安复习（2）\" rel="bookmark">软安复习（2）</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\12\25\软安复习（3）\" rel="bookmark">软安复习（3）</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\2020\12\25\软安复习（5）\" rel="bookmark">软安复习（5）</a></div>
-    </li>
-  </ul>
 
         
 
@@ -322,7 +437,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://torato-takara.github.io/2020/12/26/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%886%EF%BC%89/" title="软安复习（6）">http://torato-takara.github.io/2020/12/26/软安复习（6）/</a>
+    <a href="http://torato-takara.github.io/2020/12/27/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%A4%8D%E4%B9%A0%EF%BC%881%EF%BC%89/" title="密码学复习（1）">http://torato-takara.github.io/2020/12/27/密码学复习（1）/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -333,7 +448,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E8%AF%BE/" rel="tag"><i class="fa fa-tags"></i> # 软件安全基础课</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80%E8%AF%BE/" rel="tag"><i class="fa fa-tags"></i> # 信息安全基础课</a>
           </div>
 
         
@@ -342,13 +457,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/12/25/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%885%EF%BC%89/" rel="prev" title="软安复习（5）">
-      <i class="fa fa-chevron-left"></i> 软安复习（5）
+    <a href="/2020/12/26/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%8810%EF%BC%89/" rel="prev" title="软安复习（10）">
+      <i class="fa fa-chevron-left"></i> 软安复习（10）
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/12/26/%E8%BD%AF%E5%AE%89%E5%A4%8D%E4%B9%A0%EF%BC%887%EF%BC%89/" rel="next" title="软安复习（7）">
-      软安复习（7） <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -422,7 +534,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC06%E8%AE%B2-%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B"><span class="nav-text">第06讲 恶意代码检测</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%AE%B2-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA"><span class="nav-text">第一讲 信息安全概论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E8%AE%B2-%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">第二讲 密码学的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">密码体制的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-text">密码学的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E7%BC%96%E5%88%B6%E5%AD%A6"><span class="nav-text">密码编制学</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E5%88%86%E6%9E%90%E5%AD%A6"><span class="nav-text">密码分析学</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81"><span class="nav-text">古典密码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BD%AE%E6%8D%A2%E5%AF%86%E7%A0%81"><span class="nav-text">置换密码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%A3%E6%9B%BF%E5%AF%86%E7%A0%81"><span class="nav-text">代替密码</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E8%AE%B2-%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86-DES"><span class="nav-text">第三讲 数据加密标准(DES)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81"><span class="nav-text">分组密码</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">分组密码的特点</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81-%E4%B8%8E-%E5%BA%8F%E5%88%97%E5%AF%86%E7%A0%81"><span class="nav-text">对称分组密码 与 序列密码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Feistel%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="nav-text">Feistel网络结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DES%E5%AF%86%E7%A0%81%E7%9A%84%E6%95%B4%E4%BD%93%E7%89%B9%E7%82%B9"><span class="nav-text">DES密码的整体特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DES%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B"><span class="nav-text">DES加密过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%90%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90"><span class="nav-text">子密钥生成</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E5%87%BD%E6%95%B0"><span class="nav-text">加密函数</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
