@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> MyHexo</title>
+		<title> 文章归档 -  MyHexo</title>
 		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 		<!-- lazyload -->
@@ -82,7 +82,7 @@
 	<div class="kira-list">
 		
 		<a
-			class="kira-list-item mdui-ripple true"
+			class="kira-list-item mdui-ripple false"
 			href="/"
 			title="回到首页"
 		>
@@ -93,7 +93,7 @@
 		</a>
 		
 		<a
-			class="kira-list-item mdui-ripple false"
+			class="kira-list-item mdui-ripple true"
 			href="/archive.html"
 			title="文章归档"
 		>
@@ -218,109 +218,58 @@
 			<div class="kira-content">
 				<div id="kira-top-header"></div>
 				<div class="kira-main-content">
-					<div class="kira-posts">
+					<section class="kira-archives">
     
-        <div class="kira-post">
-            <a href="/2023/03/16/test1/">
-                
-                <div
-                    class="kira-post-cover mdui-ripple"
-                    style="padding-bottom: '56.71874999999999%'"
-                >
-                    <img
-                        data-src="https://s2.loli.net/2023/03/16/KduMtFODsRbpNmj.png"
-                        data-sizes="auto"
-                        alt="test1"
-                        class="lazyload"
-                    />
-                    <h1>test1</h1>
-                </div>
-                
-            </a>
+    <div class="tagcloud kira-rainbow">
+        <a class="mdui-ripple -unordered list-link" href="/tags/init/" rel="tag">init<span class="mdui-ripple -unordered list-count">1</span></a><a class="mdui-ripple -unordered list-link" href="/tags/init-try/" rel="tag">init, try<span class="mdui-ripple -unordered list-count">1</span></a><a class="mdui-ripple -unordered list-link" href="/tags/program-init/" rel="tag">program, init<span class="mdui-ripple -unordered list-count">1</span></a>
+    </div>
 
-            <div class="kira-post-meta kira-rainbow">
-                <a
-                    ><i class="kirafont icon-calendar-fill"></i>2023年03月16日</a
-                >
-                <a><i class="kirafont icon-areachart"></i>7 字</a>
-                <a>
-                    <i class="kirafont icon-time-circle-fill"></i>大概
-                    1 分钟
-                </a>
-            </div>
-    
+    <div class="categories kira-rainbow-fill">
+        
             
-        </div>
-        <div class="kira-hr"></div>
-    
-        <div class="kira-post">
-            <a href="/2023/03/16/test2/">
-                
-                <div
-                    class="kira-post-cover mdui-ripple"
-                    style="padding-bottom: '56.71874999999999%'"
-                >
-                    <img
-                        data-src="https://s2.loli.net/2023/03/16/KduMtFODsRbpNmj.png"
-                        data-sizes="auto"
-                        alt="test2"
-                        class="lazyload"
-                    />
-                    <h1>test2</h1>
-                </div>
-                
-            </a>
-
-            <div class="kira-post-meta kira-rainbow">
-                <a
-                    ><i class="kirafont icon-calendar-fill"></i>2023年03月16日</a
-                >
-                <a><i class="kirafont icon-areachart"></i>4 字</a>
-                <a>
-                    <i class="kirafont icon-time-circle-fill"></i>大概
-                    1 分钟
-                </a>
-            </div>
-    
             
-        </div>
-        <div class="kira-hr"></div>
-    
-        <div class="kira-post">
-            <a href="/2023/03/15/hello-world/">
                 
-                <div
-                    class="kira-post-cover mdui-ripple"
-                    style="padding-bottom: '56.71874999999999%'"
-                >
-                    <img
-                        data-src="https://s2.loli.net/2023/03/16/KduMtFODsRbpNmj.png"
-                        data-sizes="auto"
-                        alt="Hello World"
-                        class="lazyload"
-                    />
-                    <h1>Hello World</h1>
-                </div>
                 
-            </a>
-
-            <div class="kira-post-meta kira-rainbow">
-                <a
-                    ><i class="kirafont icon-calendar-fill"></i>2023年03月15日</a
-                >
-                <a><i class="kirafont icon-areachart"></i>75 字</a>
-                <a>
-                    <i class="kirafont icon-time-circle-fill"></i>大概
-                    1 分钟
-                </a>
-            </div>
-    
             
-        </div>
-        <div class="kira-hr"></div>
-    
-</div>
 
+            <a class="mdui-ripple" href="/categories/show/">
+                <div class="bg" style="background-image:url('')"></div>
+                <h1>show</h1>
+            </a>
+        
+            
+            
+                
+                
+            
+                
+                
+            
+
+            <a class="mdui-ripple" href="/categories/test/">
+                <div class="bg" style="background-image:url('')"></div>
+                <h1>test</h1>
+            </a>
+        
+    </div>
+    
+    <article>
+        
+
+        
+            <h2>2023</h2>
+            <ul>
+            
+                <li><span>03-16</span><a href="/2023/03/16/test1/" >test1</a></li>
+            
+                <li><span>03-16</span><a href="/2023/03/16/test2/" >test2</a></li>
+            
+                <li><span>03-15</span><a href="/2023/03/15/hello-world/" >Hello World</a></li>
+            
+            </ul>
+        
+    </article>
+</section>
 				</div>
 			</div>
 			<div class="kira-right-column">
