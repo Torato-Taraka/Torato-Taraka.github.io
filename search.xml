@@ -4,59 +4,9 @@
   
     
     <entry>
-      <title>test1</title>
-      <link href="/2023/03/16/test1/"/>
-      <url>/2023/03/16/test1/</url>
-      
-        <content type="html"><![CDATA[<h1 id="this-is-test-1">This is test 1</h1><p><span class="math display">\[ y=f(x) \]</span></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> numpy<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">a</span>():<br>    <span class="hljs-keyword">pass</span><br><br><span class="hljs-keyword">if</span> <span class="hljs-number">1</span> == <span class="hljs-number">2</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-number">1</span>)<br></code></pre></td></tr></tbody></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> test </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> init, try </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test2</title>
-      <link href="/2023/03/16/test2/"/>
-      <url>/2023/03/16/test2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="this-is-test-2">This is test 2</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> show </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> init </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hello World</title>
-      <link href="/2023/03/15/hello-world/"/>
-      <url>/2023/03/15/hello-world/</url>
+      <link href="/2023/03/23/hello-world/"/>
+      <url>/2023/03/23/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your veryfirst post. Check <a href="https://hexo.io/docs/">documentation</a> formore info. If you get any problems when using Hexo, you can find theanswer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> oryou can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
@@ -71,6 +21,31 @@
         <tags>
             
             <tag> program, init </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>愿望单（持续更新）</title>
+      <link href="/2023/03/23/gifts/"/>
+      <url>/2023/03/23/gifts/</url>
+      
+        <content type="html"><![CDATA[<h1 id="愿望单">愿望单</h1><table><thead><tr class="header"><th style="text-align: center;">类别</th><th style="text-align: center;">名称</th><th style="text-align: center;">一般价格</th><th style="text-align: center;">优先度</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">游戏卡带</td><td style="text-align: center;">炼金工坊 不可思议之炼金术师三部曲</td><td style="text-align: center;">&lt;600</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">宝可梦 阿尔宙斯</td><td style="text-align: center;">&lt;300</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">宝可梦 朱/紫</td><td style="text-align: center;">280</td><td style="text-align: center;">3</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">异度神剑1：终极版</td><td style="text-align: center;">200</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">异度神剑2</td><td style="text-align: center;">&lt;400</td><td style="text-align: center;">3</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="odd"><td style="text-align: center;">运动类</td><td style="text-align: center;">神速90K一代 4u5</td><td style="text-align: center;">&lt;1150</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">神速90K二代 4u5</td><td style="text-align: center;">&lt;1000</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">TK隼黑金 4u5</td><td style="text-align: center;">CN &lt;1100</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">龙牙之刃一代 4u5</td><td style="text-align: center;">&lt;1100</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;">生活类</td><td style="text-align: center;">羽亲多功能披肩</td><td style="text-align: center;">300</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;">电子类</td><td style="text-align: center;">kindle</td><td style="text-align: center;"></td><td style="text-align: center;">1</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">GPW2代（鼠标）</td><td style="text-align: center;">600</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">乐歌办公升降台</td><td style="text-align: center;">500</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">七彩虹 RTX3070 Ultra OC</td><td style="text-align: center;">3900、2600</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">七彩虹 RTX3060Ti Ultra OC</td><td style="text-align: center;">3500、2400</td><td style="text-align: center;">4</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">大疆mini2se</td><td style="text-align: center;">2400</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">大疆action3</td><td style="text-align: center;">300</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活随记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 礼物 </tag>
             
         </tags>
       
