@@ -4,16 +4,101 @@
   
     
     <entry>
-      <title>愿望单（持续更新）</title>
-      <link href="/2023/03/23/gifts/"/>
-      <url>/2023/03/23/gifts/</url>
+      <title>Denoising Diffusion Probabilistic Model</title>
+      <link href="/2023/04/26/DDPM/"/>
+      <url>/2023/04/26/DDPM/</url>
       
-        <content type="html"><![CDATA[<h1 id="愿望单">愿望单</h1><table><thead><tr class="header"><th style="text-align: center;">类别</th><th style="text-align: center;">名称</th><th style="text-align: center;">一般价格</th><th style="text-align: center;">优先度</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">游戏卡带</td><td style="text-align: center;">炼金工坊 不可思议之炼金术师三部曲</td><td style="text-align: center;">&lt;600</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">宝可梦 阿尔宙斯</td><td style="text-align: center;">&lt;300</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">宝可梦 朱/紫</td><td style="text-align: center;">280</td><td style="text-align: center;">3</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">异度神剑1：终极版</td><td style="text-align: center;">200</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">异度神剑2</td><td style="text-align: center;">&lt;400</td><td style="text-align: center;">3</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="odd"><td style="text-align: center;">运动类</td><td style="text-align: center;">神速90K一代 4u5</td><td style="text-align: center;">&lt;1150</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">神速90K二代 4u5</td><td style="text-align: center;">&lt;1000</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">TK隼黑金 4u5</td><td style="text-align: center;">CN &lt;1100</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">龙牙之刃一代 4u5</td><td style="text-align: center;">&lt;1100</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;">生活类</td><td style="text-align: center;">羽亲多功能披肩</td><td style="text-align: center;">300</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;">电子类</td><td style="text-align: center;">kindle</td><td style="text-align: center;"></td><td style="text-align: center;">1</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">GPW2代（鼠标）</td><td style="text-align: center;">600</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">乐歌办公升降台</td><td style="text-align: center;">500</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">七彩虹 RTX3070 Ultra OC</td><td style="text-align: center;">3900、2600</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">七彩虹 RTX3060Ti Ultra OC</td><td style="text-align: center;">3500、2400</td><td style="text-align: center;">4</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">大疆mini2se</td><td style="text-align: center;">2400</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">大疆action3</td><td style="text-align: center;">300</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h1 id="直观">直观</h1><p>从直观的视角看，引用苏剑林大佬的描述[1]，DDPM所做的就是将高楼大厦拆成原材料，然后从原材料再重建成高楼大厦。让模型学习拆楼的过程，知道某一时刻的状态是初始大楼经过一定步之后怎么拆出来的，这样模型就能知道每一步大概是怎么拆的，反过来也能知道该怎么建回去。</p><p>看意思很简单，难点在于，拆大楼的时候可能是这里拆一块砖，那里拆一块砖，随机性很强，并非是确定的过程，所以逆向重建几乎成了不可能的事。</p><p>因此，需要将问题建模，利用数学工具求解这一问题。</p><h1 id="原理">原理</h1><p>借鉴Lil大佬的分享[2]，我也来试图拆解一下Diffusion Model</p><p>首先定义一下问题，设 <span class="math inline">\(x_i \sim q(x_i),i=0,1,...,T\)</span> ，其中 <span class="math inline">\(x_0\)</span>是初始状态，通过前向扩散过程得到 <span class="math inline">\(x_1, x_2,... , x_T\)</span>，已知扩散过程为</p><p><span class="math inline">\(x_t = a_t x_{t-1}+b_t \epsilon_{t},\\epsilon_t \sim \mathcal{N}(\mathbf{0},\mathbf{I})\)</span></p><p>其中 <span class="math inline">\(\epsilon_t\)</span>代表t时刻加入的噪声。展开后可以得到：</p><p><span class="math inline">\(\begin{align} x_t &amp; =a_t x_{t-1} +b_t \epsilon_t \\ &amp;=a_t (a_{t-1} x_{t-2} + b_{t-1}\epsilon_{t-1}) +b_t \epsilon_{t-1} \\ &amp;= \dots \\ &amp;= (a_t \cdots a_1)x_0 + (a_t\cdots a_2)b_1\epsilon_1 + (a_t\cdots a_3)b_2\epsilon_2+\cdots+a_tb_{t-1} \epsilon_{t-1} + b_t \epsilon_t \end{align}\)</span></p><p>除第一项以外，后面是多个独立同分布的正态噪声之和，利用</p><p><span class="math inline">\(z\sim\mathcal{N}(0,I), \(Az+Bz+C)\sim\mathcal{N}(C, \sqrt{A^2+B^2}\mathbf{I})\)</span></p><p>上式可改写为</p><p><span class="math inline">\(x_t=(a_t\cdots a_1)x_0 +\sqrt{(a_t\cdotsa_2)^2b_1^2+\cdots+a_t^2b_{t-1}^2+b_t^2}\bar\epsilon_t,\\bar\epsilon_t\sim\mathcal{N}(\mathbf{0},\mathbf{I})\)</span></p><p>而这其实也是一个正态分布，而且如果我们将系数的平方加起来的话可以得到：</p><p><span class="math inline">\(\begin{align} &amp;(a_t\cdots a_1)^2+(a_t\cdots a_2)^2b_1^2+(a_t \cdots a_3)^2b_2^2+\cdots+a_t^2b_{t-1}^2+b_t^2\\ = &amp;(a_t\cdots a_2)^2(a_1^2+b_1^2)+(a_t \cdotsa_3)^2b_2^2+\cdots+a_t^2b_{t-1}^2+b_t^2 \\ = &amp;(a_t \cdotsa_3)^2(a_2^2(a_1^2+b_1^2)+b_2^2)+\cdots+a_t^2b_{t-1}^2+b_t^2 \\ =&amp;a_t^2(a_{t-1}^2(\cdots(a_2^2(a_1^2+b_1^2)+b_2^2)+\dots)+b_{t-1}^2)+b_t^2\end{align}\)</span></p><p>如果令 <span class="math inline">\(a_i^2+b_i^2=1\)</span>的话，就可以简化上面的平方和为1，因此所有的表达式都可以被简化</p><p>这就是原论文中设定 <span class="math inline">\(x_t =\sqrt{1-\beta_t}x_{t-1}+\sqrt{\beta_t}\epsilon_t\)</span> 的原因</p><p>为了与原论文统一起来，下面也用原论文的设定。</p><p>令 <span class="math inline">\(\alpha_t = 1-\beta_t,\\bar\alpha_t=\prod_i^t{\alpha_i}\)</span> ，则 <span class="math inline">\(x_t=\sqrt{\alpha_t}x_{t-1}+\sqrt{1-\alpha_t}\epsilon_t=\sqrt{\bar\alpha_t}x_0+\sqrt{1-\alpha_t}\bar\epsilon_t\)</span></p><p>上述过程也可以看作从一个高斯分布中采样，即</p><p><span class="math inline">\(\begin{align} &amp;x_t \simq(x_t|x_{t-1})=\mathcal{N}(x_t;\sqrt{\alpha_t}x_{t-1},(1-\alpha_t)\mathbf{I}) \\ &amp;\leftrightarrow x \simq(x_t|x_0)=\mathcal{N}(x_t;\sqrt{\bar\alpha_t}x_0,(1-\bar\alpha_t)\mathbf{I}) \end{align}\)</span></p><p>整个前向过程是一个后验估计，可以表示为：</p><p><span class="math inline">\(q(x_{1:T}|x_0)=\prod_{t=1}^T{q(x_t|x_{t-1})}\)</span></p><hr><p>逆向过程就是将原材料再组合成初始的大楼，我们没办法一下子做到，但是如果知道每一步应该怎么做，那给足时间，我们就能充分还原。</p><p>所以建模每一步逆向过程为 <span class="math inline">\(p_\theta(x_{t-1}|x_t)\)</span>,由于扩散的每一步我们都建模成高斯分布，那不妨逆向也设成高斯分布（事实上，文献《Onthe theory of stochastic processes, with particular reference toapplications》证明了如果 <span class="math inline">\(q(x_t|x_{t-1})\)</span> 满足高斯分布且 <span class="math inline">\(\beta_t\)</span> 足够小的话，<span class="math inline">\(q(x_{t-1}|x_t)\)</span>仍然是一个高斯分布），只不过前面的参数是确定的，而后面的参数不确定。我们先记作<span class="math inline">\(p_\theta(x_{t-1}|x_t)=\mathcal{N}(x_t-1;\mu_\theta(x_t,t),\Sigma_\theta(x_t,t))\)</span> ，整个逆向过程则可以表示成一个联合概率分布 <span class="math inline">\(p_\theta(x_{0:T})=p(x_T)\prod_{t=1}^T{p_\theta(x_{t-1}|x_t)}\)</span></p><p>值得注意的是，虽然逆向的每一步我们很难知道，但是前向的每一步是知道的。</p><h1 id="细节点">细节点</h1><p>[1] <a href="https://spaces.ac.cn/archives/9119">生成扩散模型漫谈（一）：DDPM =拆楼 + 建楼 - 科学空间|Scientific Spaces</a></p><p>[2] <a href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/#:~:text=Diffusion%20models%20are%20inspired%20by,data%20samples%20from%20the%20noise">Whatare Diffusion Models? | Lil'Log (lilianweng.github.io)</a></p><p>[3] <a href="https://zhuanlan.zhihu.com/p/548112711">扩散模型Diffusion Models - 原理篇 - 知乎 (zhihu.com)</a></p><p>[4] <a href="https://zhuanlan.zhihu.com/p/565901160">一文解释Diffusion Model (一) DDPM 理论推导 - 知乎 (zhihu.com)</a></p><p>[5] <a href="https://zhuanlan.zhihu.com/p/525106459">由浅入深了解DiffusionModel - 知乎 (zhihu.com)</a></p><p>[6] <a href="https://zhuanlan.zhihu.com/p/595866176">DiffusionModels从入门到放弃：必读的10篇经典论文 - 知乎 (zhihu.com)</a></p>]]></content>
       
       
       <categories>
           
-          <category> 生活随记 </category>
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DDPM </tag>
+            
+            <tag> diffusion </tag>
+            
+            <tag> generative </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【10】八方旅人2</title>
+      <link href="/2023/03/30/octopath_traveler2/"/>
+      <url>/2023/03/30/octopath_traveler2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="个人评分">个人评分</h3><p>总体：10</p><p>音乐：10</p><p>美术：</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nintendo Switch </tag>
+            
+            <tag> Square Enix </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>孔乙己</title>
+      <link href="/2023/03/30/kongyiji/"/>
+      <url>/2023/03/30/kongyiji/</url>
+      
+        <content type="html"><![CDATA[<h4 id="事件">事件</h4><p>前段时间，有网友自嘲“学历不但是敲门砖，也是我下不来的高台，更是孔乙己脱不下的长衫”，引起广大正当毕业季学生的强烈共鸣。热点一再发酵，央媒纷纷下场，共青团中央推文充满傲慢，直言大学生要脱下“思想上的长衫”，弯弯绕绕地表达，找达不到工作就是个人不努力的结果，不肯“挽起裤腿下田地”的结果。浙江宣传推文相对柔和，但也不过是屁股决定脑袋的文章。央视就更赤裸裸了，“孔乙己之所以陷入生活的困境，不是因为读过书，而是因为放不下读书人的架子，不愿意靠劳动改变自身的处境”。</p><h4 id="感想">感想</h4><p>这下好了，自嘲之语成了党媒攻讦年轻人的武器，好比你自嘲我过的猪狗不如，然后党媒纷纷围上来说，你过的猪狗不如是因为你不够努力。</p><p>第一，孔乙己的长衫是自嘲，是用来形容自己的学历情结。但是当代大学生的这件长衫绝对不是酸臭的、迂腐的、破旧不堪的，它可能是一个家庭二三十年的努力，为了能创造更好的生活进行的长远投资。一句脱下长衫，无异于让这些家庭放弃稳定的、可靠的未来，有多少人能接受？</p><p>第二，孔乙己的长衫绝非个人决定的，是当时的时代背景决定的，吃人的封建礼教、冷眼旁观的看客、动荡的政治环境，都促成了哪怕脱下了长衫，也难以活得好的悲惨境遇。像祥子一样拼了命地拉面包车，换来的不过是到死都攒不够钱。央媒只管批判你个人不努力，可曾想过当下的就业环境极其恶劣，没有那么多岗位能容下如此多的大学生。学历膨胀带来的后果就是层层挤压，985本硕的大学生都不好找工作，或者只找得到比之前差多了的工作，那那些211的、普本的呢？当前就业季的大学生恐怕大部分人求职过的公司比他这辈子听说过的公司都多，央媒却说这些年轻人还不够努力，还放不下面子。确实不够努力，但不够努力的或许是他们的爹妈、爷奶吧，没有在当年的打土豪分田地中，努力努力多干两个地主下来，努力努力多分到些蛋糕。</p><p>第三，此次毕业季是社会给这一批大学生的一堂课，教会他们阶级是难以逾越的。多少公司，特别是央国企，放出来的岗位上岸者的学历背景与竞争者相差甚远，或者笔试、面试不透明？其实很多都是萝卜坑，供给内部消化。哪怕你生的是条虫，也能让你的孩子去做龙的工作。</p><p>第四，北京的报刊、媒体越来越脱离群众，成了真正的政治工具，粉饰太平。</p><h4 id="杂谈">杂谈</h4><p>此次事件引起了一波又一波的讨论，有支持党媒的，有批判党媒的，也有各打一棒的。只能说，何不食肉糜的人永远都存在。他们没见过、没体会过，所以可以高高在上，指点江山。</p><p>北京四中学生对舞会的回应清晰地展现了既得利益者对教育的把控。他们接受的教育中，贫穷只不过是书面的词汇，善良只不过是对同类人的共情，所以他们培养出的学生充分继承了他们的意志，充满优越感。</p><p>所以不要期待上层阶级对下能体会，做不到的，他们下不来。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活随记,社会 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 热点 </tag>
+            
+            <tag> 媒体 </tag>
+            
+            <tag> 政治 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>愿望单（持续更新）</title>
+      <link href="/2023/03/23/gifts/"/>
+      <url>/2023/03/23/gifts/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr class="header"><th style="text-align: center;">类别</th><th style="text-align: center;">名称</th><th style="text-align: center;">一般价格</th><th style="text-align: center;">优先度</th></tr></thead><tbody><tr class="odd"><td style="text-align: center;">游戏卡带</td><td style="text-align: center;">炼金工坊 不可思议之炼金术师三部曲</td><td style="text-align: center;">&lt;600</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">宝可梦 阿尔宙斯</td><td style="text-align: center;">&lt;300</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">宝可梦 朱/紫</td><td style="text-align: center;">280</td><td style="text-align: center;">3</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">异度神剑1：终极版</td><td style="text-align: center;">200</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">异度神剑2</td><td style="text-align: center;">&lt;400</td><td style="text-align: center;">3</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="odd"><td style="text-align: center;">运动类</td><td style="text-align: center;">神速90K一代 4u5</td><td style="text-align: center;">&lt;1150</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">神速90K二代 4u5</td><td style="text-align: center;">&lt;1000</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">TK隼黑金 4u5</td><td style="text-align: center;">CN &lt;1100</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">龙牙之刃一代 4u5</td><td style="text-align: center;">&lt;1100</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;">生活类</td><td style="text-align: center;">羽亲多功能披肩</td><td style="text-align: center;">300</td><td style="text-align: center;">3</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr class="even"><td style="text-align: center;">电子类</td><td style="text-align: center;">kindle</td><td style="text-align: center;"></td><td style="text-align: center;">1</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">GPW2代（鼠标）</td><td style="text-align: center;">600</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">乐歌办公升降台</td><td style="text-align: center;">500</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">七彩虹 RTX3070 Ultra OC</td><td style="text-align: center;">3900、2600</td><td style="text-align: center;">4</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">七彩虹 RTX3060Ti Ultra OC</td><td style="text-align: center;">3500、2400</td><td style="text-align: center;">4</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;">大疆mini2se</td><td style="text-align: center;">2400</td><td style="text-align: center;">2</td></tr><tr class="even"><td style="text-align: center;"></td><td style="text-align: center;">大疆action3</td><td style="text-align: center;">300</td><td style="text-align: center;">2</td></tr><tr class="odd"><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活随记,我 </category>
           
       </categories>
       
