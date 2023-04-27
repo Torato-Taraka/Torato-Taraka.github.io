@@ -113,7 +113,7 @@ article pre {
   padding: 0 6px 0 0;
   position: relative;
   background: #282c34;
-  line-height: 1.3em;
+  line-height: 1.4em;
 }
 article pre code {
   position: relative;
@@ -164,7 +164,7 @@ article code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace, Roboto, RobotoNum, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Segoe UI';
   padding: 0 4px;
   margin: 1px 3px;
-  line-height: 1.1;
+  line-height: 1.4em;
   word-break: break-all;
   color: #31aeff;
   background-color: rgba(49,174,255,0.25);
