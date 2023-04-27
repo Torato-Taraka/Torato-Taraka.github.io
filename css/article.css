@@ -1,17 +1,21 @@
 article {
   color: #444;
-  font-family: microsoft yahei;
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 article p {
   line-height: 24px;
 }
 article .highlight {
-  padding: 0 0.5em;
-  background: #282c34;
-  color: #abb2bf;
-  margin: 25px 0;
   border-radius: 13px;
   overflow: auto;
+  background: highlight-background;
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  color: highlight-foreground;
+  line-height: 22.400000000000002px;
 }
 article .highlight .gutter {
   border-right: 1px solid #35393b;
@@ -33,6 +37,9 @@ article pre code {
   border-radius: 0;
   font-size: 100%;
   font-family: Consolas;
+  background: #eee;
+  text-shadow: 0 1px #fff;
+  padding: 0 0.3em;
 }
 article a {
   -webkit-transition: color 0.35s ease-out;

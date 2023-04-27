@@ -20,13 +20,13 @@
       
         <tags>
             
-            <tag> diffusion </tag>
-            
-            <tag> generative </tag>
-            
             <tag> score-based </tag>
             
             <tag> energy model </tag>
+            
+            <tag> diffusion </tag>
+            
+            <tag> generative </tag>
             
         </tags>
       
@@ -51,11 +51,11 @@
       
         <tags>
             
-            <tag> DDPM </tag>
-            
             <tag> diffusion </tag>
             
             <tag> generative </tag>
+            
+            <tag> DDPM </tag>
             
         </tags>
       
